@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import logo from './img/dp-logo-transparent.png';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import pokedexImage from './img/pokedex.png';
+import connect4Image from './img/connect4.png';
+import valornatimage from './img/valorant.png';
 
 function App() {
   return (
@@ -11,7 +14,7 @@ function App() {
           <img src={logo} className='App-logo' alt='logo' />
           <nav className='App-nav'>
             <Link to='/'>About</Link>
-            <Link to='/projects'>Projects</Link>
+            <Link to='/projects'>Experience</Link>
             <Link to='/resume'>Resume</Link> {}
           </nav>
         </header>
@@ -25,13 +28,16 @@ function App() {
                   <div className='about-text'>
                     <h1>David Pham</h1>
                     <h2>Welcome to my Personal Website!</h2>
-                    <h3>Website is still Work In Progress</h3>
+                    <h3>
+                      Website was created 11/5/2024 and is still Work In
+                      Progress
+                    </h3>
                     <p>
                       Hello! I'm currently a senior at the University of
                       Washington majoring in Informatics with a focus in
                       software development. I have the most interest in
                       full-stack web development with experience like
-                      internships, research, and teaching!{' '}
+                      internships, research, and teaching!
                     </p>
                     <p>
                       Outside of academics, I have leadership in two seperate
@@ -60,50 +66,66 @@ function App() {
                     <ul className='skills-list'>
                       <li>JavaScript, Node.js, Express.js, Azure, MongoDB</li>
                     </ul>
-                    {/* <img
-                      src='path/to/connect4-image.jpg'
+                    <img
+                      src={connect4Image}
                       alt='Connect 4 project screenshot'
                       className='project-image'
-                    /> */}
+                    />
                   </div>
 
                   <div className='project-card'>
                     <h3>Pokedex</h3>
                     <p>
-                      Built an Pokemon Pokedex that featured an catalog,
-                      guessing game, and shop.
+                      Built an Pokedex that featured an Pokemon catalog,
+                      guessing game, and item shop. Focused on Client Side
+                      Development.
                     </p>
                     <ul className='skills-list'>
                       <li>React, BootStrap, Firebase</li>
                     </ul>
-                    {/* <img
-                      src='path/to/pokedex-image.jpg'
+                    <img
+                      src={pokedexImage}
                       alt='Pokedex project screenshot'
                       className='project-image'
-                    /> */}
+                    />
                   </div>
 
                   <div className='project-card'>
                     <h3>Valorant Tournament Analysis</h3>
                     <p>
                       Built an maching learning model to predict the top
-                      performing players in a Valorant Tournament based on
-                      individualized performance.
+                      performing players in a Valorant Tournament.
                     </p>
                     <ul className='skills-list'>
                       <li>Python, Panda, Scikit-learn, Plotly</li>
                     </ul>
-                    {/* <img
-                      src='path/to/valorant-analysis-image.jpg'
+                    <img
+                      src={valornatimage}
                       alt='Valorant Analysis project screenshot'
                       className='project-image'
-                    /> */}
+                    />
                   </div>
 
                   <div className='project-card'>
                     <h3>More Coming Soon!</h3>
                     <p>Still Building Website</p>
                   </div>
+                  {/* </div> */}
+                  {/* <h2>Experience</h2>
+                <div className='project-container'>
+                  <div className='project-card'>
+                    <h3>More Coming Soon!</h3>
+                    <p>Still Building Website</p>
+                  </div>
+                  <div className='project-card'>
+                    <h3>More Coming Soon!</h3>
+                    <p>Still Building Website</p>
+                  </div>
+
+                  <div className='project-card'>
+                    <h3>More Coming Soon!</h3>
+                    <p>Still Building Website</p>
+                  </div>  */}
                 </div>
               </section>
             }
@@ -117,7 +139,7 @@ function App() {
                 <iframe
                   src='https://docs.google.com/document/d/1u8Go0lS6eTKbvYy-eVjPEfg2Y08wokaDN7mJ56GE4bY/preview'
                   width='100%'
-                  height='600px'
+                  height='1000px'
                   title='Resume'
                 ></iframe>
               </section>

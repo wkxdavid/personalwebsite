@@ -1,8 +1,6 @@
-# Getting Started with Create React App
+# David Pham Personal Website
 
-David Pham Personal Website
-
-## To Run
+### To Run
 
 `npm start`
 

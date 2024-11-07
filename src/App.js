@@ -4,7 +4,9 @@ import logo from './img/dp-logo-transparent.png';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import pokedexImage from './img/pokedex.png';
 import connect4Image from './img/connect4.png';
-import valornatimage from './img/valorant.png';
+import valorantImage from './img/valorant.png';
+
+// Hello, I see your taking a look at the source code. It is currently still an work in progress and I hope to make it better in the future!
 
 function App() {
   return (
@@ -55,10 +57,56 @@ function App() {
             path='/projects'
             element={
               <section id='projects-section' className='projects-section'>
-                <h2>Projects</h2>
+                <h1>Experience</h1>
+                <div className='work-container'>
+                  <div className='work-card'>
+                    <h2>Teaching Assistant</h2>
+                    <h3>Information School</h3>
+                    <h4>
+                      Serverside: React, Javascript, Express.js, Node.js
+                      MongoDB, Azure
+                    </h4>
+                    <h4>Data: R, Tidyverse, Shiny, testthat</h4>
+                    <p>INFO 441: Serverside Development</p>
+                    <p>INFO 201: Foundationals Skills of Data Science</p>
+                  </div>
+                  <div className='work-card'>
+                    <h2>Software Enginnering Intern</h2>
+                    <h3>HP Inc.</h3>
+                    <h4>
+                      React | Typescript | Java | Selenium | AWS | Jest | Enzyme{' '}
+                    </h4>
+                    <p>HP Workforce Experience Platform</p>
+                  </div>
+                  <div className='work-card'>
+                    <h2>Software Enginnering Intern</h2>
+                    <h3>FoodClub</h3>
+                    <h4>Javascript, Express.js, Node.js, Amazon DynamoDB</h4>
+                    <p>Backend Maintenance</p>
+                  </div>
+                  <div className='work-card'>
+                    <h2>Research Assistant</h2>
+                    <h3>HCDE Department</h3>
+                    <h4>Python, Pandas, OpenAI GPT 4.0, Google Perspective</h4>
+                    <p>
+                      Researched how LLM's can help highlight content
+                      moderation.
+                    </p>
+                  </div>
+                  <div className='work-card'>
+                    <h2>Research Assistant</h2>
+                    <h3>Code & Cognition Lab</h3>
+                    <h4>Typescript, Svelte, Firebase</h4>
+                    <p>
+                      Worked on Amy J. Ko "WordPlay", an interactive coding
+                      languages that focuse on learning.
+                    </p>
+                  </div>
+                </div>
+                <h1>Projects</h1>
                 <div className='project-container'>
                   <div className='project-card'>
-                    <h3>Connect 4</h3>
+                    <h2>Connect 4</h2>
                     <p>
                       Two Player Online Connect 4 game with Accounts and lobby
                       chat rooms. Developed with Mern Stack and WebSockets.
@@ -74,7 +122,7 @@ function App() {
                   </div>
 
                   <div className='project-card'>
-                    <h3>Pokedex</h3>
+                    <h2>Pokedex</h2>
                     <p>
                       Built an Pokedex that featured an Pokemon catalog,
                       guessing game, and item shop. Focused on Client Side
@@ -91,7 +139,7 @@ function App() {
                   </div>
 
                   <div className='project-card'>
-                    <h3>Valorant Tournament Analysis</h3>
+                    <h2>Valorant Tournament Analysis</h2>
                     <p>
                       Built an maching learning model to predict the top
                       performing players in a Valorant Tournament.
@@ -100,32 +148,15 @@ function App() {
                       <li>Python, Panda, Scikit-learn, Plotly</li>
                     </ul>
                     <img
-                      src={valornatimage}
+                      src={valorantImage}
                       alt='Valorant Analysis project screenshot'
                       className='project-image'
                     />
                   </div>
-
                   <div className='project-card'>
-                    <h3>More Coming Soon!</h3>
+                    <h2>More Coming Soon!</h2>
                     <p>Still Building Website</p>
                   </div>
-                  {/* </div> */}
-                  {/* <h2>Experience</h2>
-                <div className='project-container'>
-                  <div className='project-card'>
-                    <h3>More Coming Soon!</h3>
-                    <p>Still Building Website</p>
-                  </div>
-                  <div className='project-card'>
-                    <h3>More Coming Soon!</h3>
-                    <p>Still Building Website</p>
-                  </div>
-
-                  <div className='project-card'>
-                    <h3>More Coming Soon!</h3>
-                    <p>Still Building Website</p>
-                  </div>  */}
                 </div>
               </section>
             }
@@ -136,12 +167,7 @@ function App() {
             element={
               <section id='resume-section' className='resume-section'>
                 <h2>Reach out if you have any questions!</h2>
-                <iframe
-                  src='https://docs.google.com/document/d/1u8Go0lS6eTKbvYy-eVjPEfg2Y08wokaDN7mJ56GE4bY/preview'
-                  width='100%'
-                  height='1000px'
-                  title='Resume'
-                ></iframe>
+                <h3>Temporarily Disabled</h3>
               </section>
             }
           />

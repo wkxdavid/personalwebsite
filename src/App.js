@@ -42,7 +42,7 @@ function App() {
                     <p>
                       Outside of academics, I have leadership in two seperate
                       clubs where I am the President of Valorant @ UW and I
-                      mange the mentorship program in the Software Enginnering
+                      manage the mentorship program in the Software Enginnering
                       Career Club. Feel free to look around the website and
                       shoot me an email if you have any questions!
                     </p>

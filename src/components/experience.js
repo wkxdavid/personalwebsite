@@ -33,13 +33,11 @@ function ExperiencePage() {
         <div className='project-container'>
           <div className='project-card'>
             <h2>Connect 4</h2>
+            <h4>JavaScript, Node.js, Express.js, Azure, MongoDB</h4>
             <p>
               Two Player Online Connect 4 game with Accounts and lobby chat
               rooms. Developed with Mern Stack and WebSockets.
             </p>
-            <ul className='skills-list'>
-              <li>JavaScript, Node.js, Express.js, Azure, MongoDB</li>
-            </ul>
             <img
               src={connect4Image}
               alt='Connect 4 project screenshot'
@@ -49,13 +47,11 @@ function ExperiencePage() {
 
           <div className='project-card'>
             <h2>Pokedex</h2>
+            <h4>React, BootStrap, Firebase</h4>
             <p>
               Built a Pokedex that featured a Pokemon catalog, guessing game,
               and item shop. Focused on Client Side Development.
             </p>
-            <ul className='skills-list'>
-              <li>React, BootStrap, Firebase</li>
-            </ul>
             <img
               src={pokedexImage}
               alt='Pokedex project screenshot'
@@ -65,13 +61,12 @@ function ExperiencePage() {
 
           <div className='project-card'>
             <h2>Valorant Tournament Analysis</h2>
+            <h4>Python, Pandas, Scikit-learn, Plotly</h4>
+
             <p>
               Built a machine learning model to predict the top performing
               players in a Valorant Tournament.
             </p>
-            <ul className='skills-list'>
-              <li>Python, Pandas, Scikit-learn, Plotly</li>
-            </ul>
             <img
               src={valorantImage}
               alt='Valorant Analysis project screenshot'

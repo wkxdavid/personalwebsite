@@ -20,7 +20,7 @@ export const experiences = [
     icon: faBriefcase,
     title: 'Software Engineering Intern',
     company: 'HP Inc.',
-    tech: 'React | Typescript | Java | Selenium | AWS | Jest | Enzyme',
+    tech: 'React, Typescript, Java, Selenium, AWS, Jest, Enzyme',
     details: ['HP Workforce Experience Platform'],
   },
   {

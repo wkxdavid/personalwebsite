@@ -1,4 +1,5 @@
 import React from 'react';
+import tempPicture from '../img/dp-logo.png';
 
 function AboutPage() {
   return (
@@ -11,15 +12,18 @@ function AboutPage() {
           <p>
             Hello! I'm currently a senior at the University of Washington
             majoring in Informatics with a focus in software development. I have
-            the most interest in full-stack web development with experience like
+            the most interest in web development with experience like
             internships, research, and teaching!
           </p>
           <p>
-            Outside of academics, I have leadership in two seperate clubs where
+            Outside of academics, I have leadership in two separate clubs where
             I am the President of Valorant @ UW and I manage the mentorship
-            program in the Software Enginnering Career Club. Feel free to look
+            program in the Software Engineering Career Club. Feel free to look
             around the website and shoot me an email if you have any questions!
           </p>
+        </div>
+        <div className='about-image'>
+          <img src={tempPicture} alt='David Pham' />
         </div>
       </div>
     </section>

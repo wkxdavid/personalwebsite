@@ -42,26 +42,55 @@ body {
 
 .about-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 20px;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
   max-width: 600px;
+  padding: 10px;
 }
 
 .about-text h1,
 .about-text h2,
+.about-text h3,
 .about-text p {
-  margin: 5px 0;
-  line-height: 1.2;
+  margin: 10px 0;
+  line-height: 1.5;
 }
 
-.about-text {
-  padding: 10px; /* Reduce padding to make text more compact */
+.about-text h1 {
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
 .about-text h2 {
-  margin: 10px 0;
   color: #555;
+  font-size: 1.8em;
+}
+
+.about-text h3 {
+  color: #888;
+  font-size: 1.2em;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .projects-section {

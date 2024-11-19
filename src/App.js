@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import logo from './img/dp-logo-transparent.png';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import ExperiencePage from './components/experience';
-import AboutPage from './components/about';
-import ResumePage from './components/resume';
+import AboutPage from './components/IntroPage/about';
+import ExperiencePage from './components/ExperiencePage/experience';
+import ResumePage from './components/ResumePage/resume';
 
 // Hello, I see your taking a look at the source code. It is currently still an work in progress and I hope to make it better in the future!
 

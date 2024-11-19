@@ -1,8 +1,4 @@
-import {
-  faBriefcase,
-  faCode,
-  faFlask,
-} from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faFlask } from '@fortawesome/free-solid-svg-icons';
 
 export const experiences = [
   {
@@ -26,7 +22,7 @@ export const experiences = [
   {
     icon: faBriefcase,
     title: 'Software Engineering Intern',
-    company: 'FoodClub',
+    company: 'FoodCLUB',
     tech: 'Javascript, Express.js, Node.js, Amazon DynamoDB',
     details: ['Backend Maintenance'],
   },

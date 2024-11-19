@@ -1,5 +1,6 @@
 import React from 'react';
-import tempPicture from '../img/dp-logo.png';
+import tempPicture from '../../img/dp-logo.png';
+import './about.css';
 
 function AboutPage() {
   return (

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import AboutPage from './components/IntroPage/about';
 import ExperiencePage from './components/ExperiencePage/experience';
 import ResumePage from './components/ResumePage/resume';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 // Hello, I see your taking a look at the source code. It is currently still an work in progress and I hope to make it better in the future!
 
@@ -29,30 +30,38 @@ function App() {
 
         <footer className='App-footer'>
           <div className='contact-info'>
-            <p>
-              Email:{' '}
-              <a href='mailto:phamdavid722@gmail.com'>phamdavid722@gmail.com</a>
-            </p>
-            <p>
-              LinkedIn:{' '}
-              <a
-                href='https://www.linkedin.com/in/phamdavid722'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                phamdavid722
-              </a>
-            </p>
-            <p>
-              GitHub:{' '}
-              <a
-                href='https://github.com/wkxdavid'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                wkxdavid
-              </a>
-            </p>
+            <div className='social-item'>
+              <FaEnvelope size={30} />
+              <p>
+                <a href='mailto:phamdavid722@gmail.com'>
+                  phamdavid722@gmail.com
+                </a>
+              </p>
+            </div>
+            <div className='social-item'>
+              <FaLinkedin size={30} />
+              <p>
+                <a
+                  href='https://www.linkedin.com/in/phamdavid722'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  phamdavid722
+                </a>
+              </p>
+            </div>
+            <div className='social-item'>
+              <FaGithub size={30} />
+              <p>
+                <a
+                  href='https://github.com/wkxdavid'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  wkxdavid
+                </a>
+              </p>
+            </div>
           </div>
           <p>&copy; 2024 David Pham. All rights reserved.</p>
         </footer>

@@ -1,5 +1,5 @@
 import React from 'react';
-import tempPicture from '../../img/dp-logo.png';
+import Personal from '../../img/DavidPham.JPG';
 import './about.css';
 
 function AboutPage() {
@@ -9,7 +9,7 @@ function AboutPage() {
         <div className='about-text'>
           <h1>David Pham</h1>
           <h2>Welcome to my Personal Website!</h2>
-          <h3>Website was created 11/5/2024 and is still Work In Progress</h3>
+          {/* <h3>Website was created 11/5/2024 and is still Work In Progress</h3> */}
           <p>
             Hello! I'm currently a senior at the University of Washington
             majoring in Informatics with a focus in software development. I have
@@ -24,7 +24,7 @@ function AboutPage() {
           </p>
         </div>
         <div className='about-image'>
-          <img src={tempPicture} alt='David Pham' />
+          <img src={Personal} alt='David Pham' />
         </div>
       </div>
     </section>

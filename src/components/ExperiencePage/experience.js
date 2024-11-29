@@ -8,6 +8,7 @@ function ExperiencePage() {
     <div>
       <section id='projects-section' className='projects-section'>
         <h1 className='text-3xl font-bold text-center mb-8'>Projects</h1>
+        <h3>Previous learning sandboxes that I worked on.</h3>
         <div className='project-container'>
           {projects.map((project, index) => (
             <div key={index} className='project-card'>

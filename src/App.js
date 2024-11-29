@@ -8,7 +8,7 @@ import {
   Link,
   useLocation,
 } from 'react-router-dom';
-import AboutPage from './components/IntroPage/about';
+import AboutPage from './components/AboutPage/about';
 import ExperiencePage from './components/ExperiencePage/experience';
 import HomePage from './components/HomePage/home';
 import ResumePage from './components/ResumePage/resume';
@@ -32,7 +32,7 @@ function Navbar() {
           <Link to='/about'>About</Link>
         </li>
         <li>
-          <Link to='/experience'>Experience</Link>
+          <Link to='/experience'>Work</Link>
         </li>
         <li>
           <Link to='/resume'>Resume</Link>

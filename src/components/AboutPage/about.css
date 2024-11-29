@@ -58,7 +58,7 @@
 }
 
 .about-text h1 {
-  font-size: 3em;
+  font-size: 4em;
   font-weight: bold;
 }
 
@@ -70,6 +70,11 @@
 .about-text h3 {
   color: #888;
   font-size: 1.5em;
+}
+
+.about-text p {
+  color: #555;
+  font-size: 1.15em;
 }
 
 .about-image {

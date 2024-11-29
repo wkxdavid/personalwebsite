@@ -49,7 +49,7 @@ function HomePage() {
               About
             </Link>
             <Link to='/experience' className='home-button'>
-              Experience
+              Work
             </Link>
             <Link to='/resume' className='home-button'>
               Resume

@@ -90,3 +90,102 @@
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
+@media only screen and (max-width: 767px) {
+  .App-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .App-logo {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .App-nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .App-nav a {
+    font-size: 18px;
+    margin: 5px 10px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-text h1 {
+    font-size: 2.5em;
+  }
+
+  .about-text h2 {
+    font-size: 1.8em;
+  }
+
+  .about-text h3 {
+    font-size: 1.3em;
+  }
+
+  .about-text p {
+    font-size: 1em;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .App-header {
+    padding: 15px 20px;
+  }
+
+  .App-logo {
+    height: 45px;
+  }
+
+  .App-nav a {
+    font-size: 16px;
+    margin: 5px 8px;
+  }
+
+  .about-section {
+    padding: 15px;
+  }
+
+  .about-container {
+    gap: 15px;
+  }
+
+  .about-text h1 {
+    font-size: 2em;
+  }
+
+  .about-text h2 {
+    font-size: 1.6em;
+  }
+
+  .about-text h3 {
+    font-size: 1.2em;
+  }
+
+  .about-text p {
+    font-size: 0.9em;
+  }
+
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+}

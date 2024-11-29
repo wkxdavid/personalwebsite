@@ -11,7 +11,7 @@ function AboutPage() {
           <p>
             Hello! I'm currently a senior at the University of Washington
             majoring in Informatics with a focus on software development. I have
-            the most experience of working with Full-Stack Development with
+            the most experience in Full-Stack Development with
             Javascript/Typescript and Node.js but also have a solid background
             in Java and Python.
           </p>

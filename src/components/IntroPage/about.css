@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 15px 30px;
   background-color: #282c34;
 }
 
 .App-logo {
-  height: 50px;
+  height: 60px;
 }
 
 .App-nav {
@@ -16,9 +16,9 @@
 
 .App-nav a {
   color: white;
-  margin: 0 15px;
+  margin: 0 20px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .App-nav a:hover {
@@ -29,47 +29,47 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 70px);
-  padding: 20px;
+  height: calc(100vh - 80px);
+  padding: 30px;
 }
 
 .about-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1300px;
   width: 100%;
-  gap: 20px;
+  gap: 30px;
 }
 
 .about-text {
   flex: 1;
   text-align: left;
-  max-width: 600px;
-  padding: 10px;
+  max-width: 700px;
+  padding: 20px;
 }
 
 .about-text h1,
 .about-text h2,
 .about-text h3,
 .about-text p {
-  margin: 10px 0;
-  line-height: 1.5;
+  margin: 15px 0;
+  line-height: 1.6;
 }
 
 .about-text h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: bold;
 }
 
 .about-text h2 {
   color: #555;
-  font-size: 1.8em;
+  font-size: 2em;
 }
 
 .about-text h3 {
   color: #888;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .about-image {
@@ -81,7 +81,7 @@
 
 .about-image img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }

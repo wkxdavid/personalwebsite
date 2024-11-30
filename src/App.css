@@ -1,5 +1,8 @@
+.App-header {
+  background-color: #f0f0f0;
+}
+
 .navbar {
-  background-color: #282c34;
   padding: 20px 0;
 }
 
@@ -16,21 +19,29 @@
 }
 
 .navbar a {
-  color: #d2b48c;
+  color: #333;
   text-decoration: none;
   font-size: 1.2em;
   padding: 10px 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-  background-color: #a67c52;
-  color: white;
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border: 2px solid #d2b48c;
   border-radius: 5px;
+  transition: all 0.4s ease;
+  box-sizing: border-box;
 }
 
-.navbar a:focus {
-  outline: none;
+.navbar a:hover::before {
+  width: 100%;
 }
 
 body {

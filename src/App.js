@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import logo from './img/dp-logo-transparent.png';
+import logo from './img/dp-logo-transparent-black.jpg';
 import {
   BrowserRouter as Router,
   Route,
@@ -47,10 +47,11 @@ function Header() {
   if (location.pathname === '/') {
     return null;
   }
-
   return (
     <header className='App-header'>
-      <img src={logo} className='App-logo' alt='logo' />
+      <Link to='/'>
+        <img src={logo} className='App-logo' alt='logo' />
+      </Link>
       <Navbar />
     </header>
   );

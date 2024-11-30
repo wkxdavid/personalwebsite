@@ -9,7 +9,7 @@ function HomePage() {
       <div className='home-container'>
         <div className='home-text'>
           <h1>David Pham</h1>
-          <h2>Senior Informatics @ University of Washington</h2>
+          <h2>Software Engineer</h2>
           <div className='contact-info'>
             <div className='link-item'>
               <FaEnvelope size={30} />

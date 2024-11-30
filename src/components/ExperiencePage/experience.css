@@ -1,13 +1,25 @@
+html,
+body {
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
 #projects-section {
-  background-color: #f8f9fa;
   padding: 50px 20px;
   text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s 0.2s forwards;
 }
 
 #projects-section h1 {
   font-size: 2.5em;
   color: #333;
   margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1s 0.4s forwards;
 }
 
 .work-container,
@@ -18,6 +30,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  opacity: 0;
+  animation: fadeIn 1s 0.6s forwards;
 }
 
 .work-card,
@@ -28,6 +42,8 @@
   border-radius: 10px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s 0.8s forwards;
 }
 
 .work-card:hover,
@@ -39,6 +55,8 @@
 .more-coming-soon {
   text-align: center;
   grid-column: span 3;
+  opacity: 0;
+  animation: fadeIn 1s 1s forwards;
 }
 
 .work-card h2,
@@ -70,4 +88,118 @@
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
+}
+
+.popup-image {
+  width: 1000px;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.popup-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-container {
+  position: relative;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 1000;
+  max-width: 1000px;
+  width: auto;
+  animation: popup-fade-in 0.3s ease-out;
+}
+
+@keyframes popup-fade-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.popup-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #d2b48c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-container button:hover {
+  background: #a67c52;
+}
+
+.project-container,
+.work-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  opacity: 0;
+  animation: fadeIn 1s 0.6s forwards;
+}
+
+.project-card,
+.work-card {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s 0.8s forwards;
+}
+
+.project-card:hover,
+.work-card:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.content h2,
+.content h3,
+.content h4 {
+  margin: 5px 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

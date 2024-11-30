@@ -10,16 +10,14 @@ function AboutPage() {
           <h1>David Pham</h1>
           <p>
             Hello! I'm currently a senior at the University of Washington
-            majoring in Informatics with a focus on software development. I have
-            the most experience in Full-Stack Development with
-            Javascript/Typescript and Node.js but also have a solid background
-            in Java and Python.
+            majoring in Informatics with a focus on software development. Big
+            fan of basic minimalistic design and I hope this website shows that.
+            Currently focusing on learning whatever comes to mind.
           </p>
           <p>
-            Aside from my technical background, I have leadership in two
-            separate clubs, where I am the President of Valorant @ UW and I
-            manage the mentorship program in the Software Engineering Career
-            Club.
+            Outside of academics, I have leadership in two separate clubs, where
+            I am the President of Valorant @ UW and I manage the mentorship
+            program in the Software Engineering Career Club.
           </p>
           <p>
             Some of my favorite hobbies are exercising, traveling, and gaming.

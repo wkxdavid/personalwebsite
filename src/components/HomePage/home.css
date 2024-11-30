@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
 .home-section {
@@ -13,10 +14,14 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 .home-container {
   text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s 0.5s forwards;
 }
 
 .home-text h1 {
@@ -26,6 +31,8 @@ body {
 
 .home-buttons {
   margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 1.5s 1.5s forwards;
 }
 
 .home-button {
@@ -49,6 +56,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  opacity: 0;
+  animation: fadeIn 1.5s 1.5s forwards;
 }
 
 .link-item {
@@ -128,5 +137,14 @@ body {
 
   .link-item p {
     font-size: 0.9em;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

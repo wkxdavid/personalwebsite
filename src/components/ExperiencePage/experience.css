@@ -91,8 +91,7 @@ body {
 }
 
 .popup-image {
-  width: 1000px;
-  height: auto;
+  height: 500px;
   margin: 10px 0;
   border-radius: 10px;
   object-fit: cover;
@@ -125,9 +124,7 @@ body {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  z-index: 1000;
-  max-width: 1000px;
-  width: auto;
+  max-width: 65%;
   animation: popup-fade-in 0.3s ease-out;
 }
 
@@ -201,5 +198,65 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 1280px) and (min-height: 800px) {
+  #projects-section {
+    padding: 60px 30px;
+  }
+
+  #projects-section h1 {
+    font-size: 3em;
+  }
+
+  .work-container,
+  .project-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  .work-card,
+  .project-card {
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .work-card h2,
+  .project-card h2 {
+    font-size: 1.6em;
+  }
+
+  .work-card h3,
+  .project-card h4 {
+    font-size: 1.4em;
+  }
+
+  .work-card p,
+  .project-card p {
+    font-size: 1.1em;
+  }
+
+  .work-card img,
+  .project-image {
+    height: 250px;
+  }
+
+  .popup-image {
+    width: 1200px;
+  }
+
+  .popup-container {
+    width: 80%;
+  }
+
+  .more-coming-soon {
+    grid-column: span 4;
+  }
+
+  .project-container,
+  .work-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

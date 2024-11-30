@@ -88,7 +88,7 @@ function ExperiencePage() {
                     </span>
                   ))}
             </p>
-            <p> Tech Stack: {popupContent.tech}</p>
+            <p> Tech Stack: {popupContent.tech || 'Python'}</p>
             <button onClick={closePopup}>Close</button>
           </div>
         </div>

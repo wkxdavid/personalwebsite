@@ -125,3 +125,13 @@ body {
 .App-footer p a:hover {
   color: #a67c52;
 }
+
+html,
+body {
+  overflow: hidden;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}

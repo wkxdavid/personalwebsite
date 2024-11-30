@@ -12,9 +12,10 @@ export const workExperience = [
     icon: faBriefcase,
     title: 'Teaching Assistant',
     company: 'Information School',
-    tech: 'Clientside/Serverside: React, Javascript, Express.js, Node.js MongoDB, Azure',
-    data: 'Data: R, Tidyverse, Shiny, testthat',
+    tech: 'Frontend/Backend Development: React, Javascript, Express.js, Node.js MongoDB, Azure --- Data Science: R, Tidyverse, Shiny, testthat',
+
     details: [
+      ' One of my favorite things to do is help other people learn coding! The classes listed below are the ones that I had the privilege to teach:',
       'INFO 441: Serverside Development',
       'INFO 201: Foundationals Skills of Data Science',
       'INFO 340: Client Side Development',
@@ -25,21 +26,23 @@ export const workExperience = [
     title: 'Software Engineering Intern',
     company: 'HP Inc.',
     tech: 'React, Typescript, Java, Selenium, AWS, Jest, Enzyme',
-    details: ['HP Workforce Experience Platform'],
+    details: ['HP Workforce Experience Platform ~ NDA'],
   },
   {
     icon: faBriefcase,
     title: 'Software Engineering Intern',
     company: 'FoodCLUB',
     tech: 'Javascript, Express.js, Node.js, Amazon DynamoDB',
-    details: ['Backend Maintenance'],
+    details: ['Backend Maintenance ~ NDA'],
   },
   {
     icon: faFlask,
     title: 'Research Assistant',
-    company: 'HCDE Department',
+    company: 'Human Centered Design and Engineering Department',
     tech: 'Python, Pandas, OpenAI GPT 4.0, Google Perspective',
-    details: ["Researched how LLM's can help highlight content moderation."],
+    details: [
+      "Researched how LLM's and Generative AI can help improve content moderation. Specfically focused on social media and video game chat rooms.",
+    ],
   },
   {
     icon: faFlask,
@@ -47,15 +50,13 @@ export const workExperience = [
     company: 'Code & Cognition Lab',
     tech: 'Typescript, Svelte, Firebase',
     details: [
-      'Worked on Amy J. Ko "WordPlay", an interactive coding languages focused on learning.',
+      'Worked as an Front-end developer on Amy J. Ko "WordPlay", an interactive coding languages focused on learning.',
     ],
   },
   {
     icon: faBriefcase,
     title: 'Leadership',
     company: 'SWECC, Valorant @ UW ',
-    // tech: 'Clientside/Serverside: React, Javascript, Express.js, Node.js MongoDB, Azure',
-    // data: 'Data: R, Tidyverse, Shiny, testthat',
     details: [
       'Mentorship Program Manager @ SWECC',
       'President of Valorant @ UW',
@@ -68,7 +69,7 @@ export const projects = [
     title: 'Connect 4',
     tech: 'JavaScript, Node.js, Express.js, Azure, MongoDB',
     description:
-      'Two Player Online Connect 4 game with Accounts and lobby chat rooms. Developed with Mern Stack and WebSockets.',
+      'Two Player Online Connect 4 game with accounts and lobby chat rooms. Developed with Mern Stack and WebSockets.',
     image: connect4Image,
     alt: 'Connect 4 project screenshot',
   },
@@ -76,7 +77,7 @@ export const projects = [
     title: 'Pokedex',
     tech: 'React, BootStrap, Firebase',
     description:
-      'Built a Pokedex that featured a Pokemon catalog, guessing game, and item shop. Focused on Client Side Development.',
+      'Built a Pokedex that featured a Pokemon catalog, guessing game, and item shop. Integrated Firebase authenication and database.',
     image: pokedexImage,
     alt: 'Pokedex project screenshot',
   },
@@ -84,7 +85,7 @@ export const projects = [
     title: 'Valorant Tournament Analysis',
     tech: 'Python, Pandas, Scikit-learn, Plotly',
     description:
-      'Built a machine learning model to predict the top performing players in a Valorant Tournament.',
+      'A machine learning model to predict the top performing players in a Valorant Tournament. Displayed model results via Plotly Visualizations.',
     image: valorantImage,
     alt: 'Valorant Analysis project screenshot',
   },
@@ -92,7 +93,7 @@ export const projects = [
     title: 'Memory Mentor',
     tech: 'Kotlin, Firebase,  Android Studio',
     description:
-      'Customizable Flashcard app for creating your own flashcards and studying.',
+      'Customizable Flashcard mobile app for creating your own flashcards and study set. Built in calender alerts to notify study times.',
     image: MemoryMentor,
     alt: 'Flash Card App',
   },
@@ -100,15 +101,15 @@ export const projects = [
     title: 'Gym Data Analysis',
     tech: 'R, Tidyverse, Plotly, Shiny',
     description:
-      'A Data Analysis on UC Berkeley Gym Data focusing on activity trends throughout a school year and factors affecting it.',
+      'A data analysis on UC Berkeley Gym Data focusing on activity trends throughout a school year and factors affecting it.',
     image: gymData,
     alt: 'Gym Data Analysis',
   },
   {
-    title: 'Gym SQL Test',
+    title: 'Workout Database Searcher',
     tech: 'SQL, SQL Server Management Studio',
     description:
-      'Created ER Diagrams and made SQL queries to analyze top workouts.',
+      'SQL Database design focused on finding optimal workouts based on muscle group. Created ER Diagrams and made SQL queries to analyze workouts.',
     image: GymSchema,
     alt: 'Gym Data Schema',
   },
@@ -118,6 +119,6 @@ export const projects = [
     description:
       'Built an interactive D3 Visualization to evaluate how different cities compare in precipitation and Temperature throughout the year.',
     image: d3Viz,
-    alt: 'Weather Visualization',
+    alt: 'Weather Data Visualization',
   },
 ];

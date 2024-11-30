@@ -21,7 +21,7 @@ function AboutPage() {
           </p>
           <p>
             Some of my favorite hobbies are exercising, traveling, and gaming.
-            Also, I love spending time with friends and family. Feel free to
+            Otherwise, I love spending time with those close to me. Feel free to
             look around the website and email me if you have any questions!
           </p>
         </div>

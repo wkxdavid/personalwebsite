@@ -13,8 +13,6 @@ import ExperiencePage from './components/ExperiencePage/experience';
 import HomePage from './components/HomePage/home';
 import ResumePage from './components/ResumePage/resume';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
 
 // Hello, I see your taking a look at the source code. It is currently still an work in progress and I hope to make it better in the future!
 
@@ -67,9 +65,6 @@ function Footer() {
 
   return (
     <footer className='App-footer'>
-      <Analytics />
-      <SpeedInsights />
-
       <div className='contact-info'>
         <div className='social-item'>
           <FaEnvelope size={30} />

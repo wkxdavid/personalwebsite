@@ -25,6 +25,8 @@ function ExperiencePage() {
   return (
     <div>
       <section id='projects-section' className='projects-section'>
+        <h1>Work in Progress 12/1/2024</h1>
+
         <h1 className='text-3xl font-bold text-center mb-8'>Projects</h1>
         <h3>Previous learning sandboxes that I worked on.</h3>
         <div className='project-container'>
@@ -48,8 +50,7 @@ function ExperiencePage() {
 
         <h1>Experience</h1>
         <h3>
-          For a more detailed description of my Experiences, please reach out or
-          take a look at my resume!
+          For a more detailed description of my Experiences, please reach out!
         </h3>
         <div className='work-container'>
           {workExperience.map((exp, index) => (

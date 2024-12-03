@@ -10,9 +10,10 @@ function AboutPage() {
           <h1>David Pham</h1>
           <p>
             Hello! I'm currently a senior at the University of Washington
-            majoring in Informatics with a focus on software development. Big
-            fan of basic minimalistic design and I hope this website shows that.
-            Currently focusing on learning whatever comes to mind.
+            majoring in Informatics. Currently focusing on learning data and web
+            development. Big fan of basic minimalistic design and I hope this
+            website shows that. Currently focusing on learning whatever comes to
+            mind.
           </p>
           <p>
             Outside of academics, I have leadership in two separate clubs, where

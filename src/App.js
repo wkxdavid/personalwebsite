@@ -11,7 +11,7 @@ import {
 import AboutPage from './components/AboutPage/about';
 import ExperiencePage from './components/ExperiencePage/experience';
 import HomePage from './components/HomePage/home';
-import ResumePage from './components/ResumePage/resume';
+// import ResumePage from './components/ResumePage/resume';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 // Hello, I see your taking a look at the source code. It is currently still an work in progress and I hope to make it better in the future!

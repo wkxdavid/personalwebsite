@@ -1,5 +1,5 @@
 .App-header {
-  background-color: #f0f0f0;
+  background-color: var(--secondary-bg);
 }
 
 .navbar {
@@ -19,7 +19,7 @@
 }
 
 .navbar a {
-  color: #333;
+  color: var(--text-primary);
   text-decoration: none;
   font-size: 1.2em;
   padding: 10px 20px;
@@ -34,7 +34,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  border: 2px solid #d2b48c;
+  border: 2px solid var(--accent);
   border-radius: 5px;
   transition: all 0.4s ease;
   box-sizing: border-box;
@@ -47,32 +47,13 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
 }
 
 .App-footer {
-  background-color: #d2b48c;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.contact-info {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.contact-info p {
-  margin: 0 15px;
-}
-
-.App-footer {
-  background-color: #282c34;
-  color: white;
+  background-color: var(--border-color);
+  color: var(--text-secondary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,36 +75,35 @@ body {
 }
 
 .social-item p {
-  margin-left: 100px;
   margin: 0;
-  color: #a3a3a3;
+  color: var(--text-secondary);
   display: flex;
   align-items: center;
   padding-left: 10px;
 }
 
 .social-item p a {
-  color: #a3a3a3;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .social-item p a:hover {
-  color: #a67c52;
+  color: var(--accent);
 }
 
 .App-footer p {
   margin-top: 1px;
   font-size: 14px;
-  color: #a3a3a3;
+  color: var(--text-secondary);
 }
 
 .App-footer p a {
-  color: #a3a3a3;
+  color: var(--text-secondary);
 }
 
 .App-footer p a:hover {
-  color: #a67c52;
+  color: var(--accent);
 }
 
 html,

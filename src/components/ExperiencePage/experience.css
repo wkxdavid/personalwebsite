@@ -5,6 +5,8 @@ body {
   overflow-y: auto;
   margin: 0;
   padding: 0;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
 }
 
 #projects-section {
@@ -16,7 +18,7 @@ body {
 
 #projects-section h1 {
   font-size: 2.5em;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 30px;
   opacity: 0;
   animation: fadeIn 1s 0.4s forwards;
@@ -33,7 +35,6 @@ body {
   animation: fadeIn 1s 0.6s forwards;
 }
 
-
 .project-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -47,7 +48,7 @@ body {
 
 .work-card,
 .project-card {
-  background-color: #ffffff;
+  background-color: var(--secondary-bg);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 10px;
@@ -72,7 +73,7 @@ body {
 .work-card h2,
 .project-card h2 {
   font-size: 1.4em;
-  color: #333;
+  color: var(--text-primary);
   margin: 10px 0;
   font-weight: bold;
 }
@@ -80,14 +81,14 @@ body {
 .work-card h3,
 .project-card h4 {
   font-size: 1.2em;
-  color: #555;
+  color: var(--text-secondary);
   margin: 5px 0;
 }
 
 .work-card p,
 .project-card p {
   font-size: 1em;
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.5;
 }
 
@@ -130,7 +131,7 @@ body {
 
 .popup-container {
   position: relative;
-  background: white;
+  background: var(--secondary-bg);
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -152,15 +153,15 @@ body {
 .popup-container button {
   margin-top: 20px;
   padding: 10px 20px;
-  background: #d2b48c;
-  color: white;
+  background: var(--accent);
+  color: var(--primary-bg);
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .popup-container button:hover {
-  background: #a67c52;
+  background: var(--border-color);
 }
 
 .content h2,

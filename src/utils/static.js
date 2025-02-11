@@ -1,11 +1,13 @@
 import { faBriefcase, faFlask } from '@fortawesome/free-solid-svg-icons';
-import pokedexImage from '../img/pokedex.png';
-import connect4Image from '../img/connect4.png';
-import valorantImage from '../img/valorant.png';
-import GymSchema from '../img/GymDataSchema.png';
-import gymData from '../img/GymDataMap.png';
-import d3Viz from '../img/D3Viz.png';
-import MemoryMentor from '../img/MemoryMentor.PNG';
+import {
+  pokedexImage,
+  connect4Image,
+  valorantImage,
+  GymSchema,
+  gymData,
+  d3Viz,
+  MemoryMentor,
+} from '../img';
 
 export const workExperience = [
   {

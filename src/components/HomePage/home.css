@@ -3,8 +3,9 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: var(--primary-bg);
   font-family: Arial, sans-serif;
+  color: var(--text-primary);
 }
 
 .home-section {
@@ -12,7 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: var(--primary-bg);
   opacity: 0;
   animation: fadeIn 1s forwards;
 }
@@ -26,6 +27,7 @@ body {
 .home-text h1 {
   font-size: 3em;
   margin-bottom: 20px;
+  color: var(--text-primary);
 }
 
 .home-buttons {
@@ -39,15 +41,15 @@ body {
   padding: 12px 25px;
   margin: 10px;
   text-decoration: none;
-  background-color: #d2b48c;
-  color: #333;
+  background-color: var(--accent);
+  color: var(--primary-bg);
   border-radius: 5px;
   font-size: 1.2em;
   transition: background-color 0.3s ease;
 }
 
 .home-button:hover {
-  background-color: #a67c52;
+  background-color: #80ffd1;
 }
 
 .contact-info {
@@ -66,20 +68,20 @@ body {
 
 .link-item p {
   margin: 0;
-  color: #333;
+  color: var(--text-secondary);
   display: flex;
   align-items: center;
   padding-left: 10px;
 }
 
 .link-item p a {
-  color: #333;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .link-item p a:hover {
-  color: #a67c52;
+  color: var(--accent);
 }
 
 @media only screen and (max-width: 767px) {

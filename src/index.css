@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --primary-bg: #0a192f;
+  --secondary-bg: #112240;
+  --accent: #64ffda;
+  --text-primary: #e6f1ff;
+  --text-secondary: #8892b0;
+  --border-color: #233554;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}

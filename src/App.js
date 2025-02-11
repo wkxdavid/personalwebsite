@@ -34,9 +34,9 @@ function Navbar() {
         <li>
           <Link to='/experience'>Work</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to='/resume'>Resume</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
@@ -111,7 +111,7 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='/experience' element={<ExperiencePage />} />
-          <Route path='/resume' element={<ResumePage />} />
+          {/* <Route path='/resume' element={<ResumePage />} /> */}
         </Routes>
         <Footer />
       </div>

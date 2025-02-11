@@ -10,30 +10,17 @@ import MemoryMentor from '../img/MemoryMentor.PNG';
 export const workExperience = [
   {
     icon: faBriefcase,
-    title: 'Teaching Assistant',
-    company: 'Information School',
-    tech: 'Frontend/Backend Development: React, Javascript, Express.js, Node.js MongoDB, Azure --- Data Science: R, Tidyverse, Shiny, testthat',
-
-    details: [
-      ' One of my favorite things to do is help other people learn coding! The classes listed below are the ones that I had the privilege to teach:',
-      'INFO 441: Serverside Development',
-      'INFO 201: Foundationals Skills of Data Science',
-      'INFO 340: Client Side Development',
-    ],
-  },
-  {
-    icon: faBriefcase,
     title: 'Software Engineering Intern',
     company: 'HP Inc.',
     tech: 'React, Typescript, Java, Selenium, AWS, Jest, Enzyme',
-    details: ['HP Workforce Experience Platform ~ NDA'],
+    details: ['HP Workforce Experience Platform'],
   },
   {
     icon: faBriefcase,
     title: 'Software Engineering Intern',
     company: 'FoodCLUB',
     tech: 'Javascript, Express.js, Node.js, Amazon DynamoDB',
-    details: ['Backend Maintenance ~ NDA'],
+    details: ['Backend Maintenance'],
   },
   {
     icon: faFlask,
@@ -51,6 +38,19 @@ export const workExperience = [
     tech: 'Typescript, Svelte, Firebase',
     details: [
       'Worked as an Front-end developer on Amy J. Ko "WordPlay", an interactive coding languages focused on learning.',
+    ],
+  },
+  {
+    icon: faBriefcase,
+    title: 'Teaching Assistant',
+    company: 'Information School',
+    tech: 'Frontend/Backend Development: React, Javascript, Express.js, Node.js MongoDB, Azure --- Data Science: R, Tidyverse, Shiny, testthat',
+
+    details: [
+      ' One of my favorite things to do is help other people learn coding! The classes listed below are the ones that I had the privilege to teach:',
+      'INFO 441: Serverside Development',
+      'INFO 201: Foundationals Skills of Data Science',
+      'INFO 340: Client Side Development',
     ],
   },
   {

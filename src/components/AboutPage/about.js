@@ -7,23 +7,20 @@ function AboutPage() {
     <section id='about-section' className='about-section'>
       <div className='about-container'>
         <div className='about-text'>
-          <h1>David Pham</h1>
+          <h1>Hello!</h1>
           <p>
-            Hello! I'm currently a senior at the University of Washington
-            majoring in Informatics. Currently focusing on learning data and web
-            development. Big fan of basic minimalistic design and I hope this
-            website shows that. Currently focusing on learning whatever comes to
-            mind.
+            I'm David and I am studying <a href="https://ischool.uw.edu/">Informatics</a> with a focus in 
+            Software Engineering at the University of Washington. Passionate about solving interesting problems and building connections wherever I go.
           </p>
           <p>
-            Outside of academics, I have leadership in two separate clubs, where
-            I am the President of Valorant @ UW and I manage the mentorship
-            program in the Software Engineering Career Club.
+            While at school, I have been able to do both research for the <a href="https://faculty.washington.edu/ajko/lab">Code and Cognition Lab</a>  where 
+            I worked on Wordplay and the <a href="https://www.hcde.washington.edu/">HCDE Department</a> where 
+            I research content moderation using LLM's. Along with that, I have teaching assistant for a lot of the core software development 
+            courses in the iSchool that involve skills with frontend and backend web development. I have also had the privilege to do internships with <a href="https://www.hp.com/us-en/home.html">HP Inc.</a> and FoodCLUB.
           </p>
           <p>
-            Some of my favorite hobbies are exercising, traveling, and gaming.
-            Otherwise, I love spending time with those close to me. Feel free to
-            look around the website and email me if you have any questions!
+            Outside of Academics, I have spent a lot of time doing leadership positions two different clubs. I serve as the President for <a href="https://www.instagram.com/valorant_uw/">Valorant @ UW</a> and 
+            Mentorship Program Manager for <a href="https://swecc.org/">Software Enginnering Career Club</a>. As graduation approaches, I’m looking forward to what’s next.
           </p>
         </div>
         <div className='about-image'>

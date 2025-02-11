@@ -25,6 +25,25 @@ function ExperiencePage() {
   return (
     <div>
       <section id='projects-section' className='projects-section'>
+      <h1>Experience</h1>
+        <h3>
+          For a more detailed description of my Experiences, please reach out!
+        </h3>
+        <div className='work-container'>
+          {workExperience.map((exp, index) => (
+            <div
+              key={index}
+              className='work-card'
+              onClick={() => openPopup(exp)}
+            >
+              <div className='content'>
+                <h2>{exp.title}</h2>
+                <h3>{exp.company}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+        
         <h1 className='text-3xl font-bold text-center mb-8'>Projects</h1>
         <h3>Previous learning sandboxes that I worked on.</h3>
         <div className='project-container'>
@@ -42,25 +61,6 @@ function ExperiencePage() {
                 />
               )}
               <h2>{project.title}</h2>
-            </div>
-          ))}
-        </div>
-
-        <h1>Experience</h1>
-        <h3>
-          For a more detailed description of my Experiences, please reach out!
-        </h3>
-        <div className='work-container'>
-          {workExperience.map((exp, index) => (
-            <div
-              key={index}
-              className='work-card'
-              onClick={() => openPopup(exp)}
-            >
-              <div className='content'>
-                <h2>{exp.title}</h2>
-                <h3>{exp.company}</h3>
-              </div>
             </div>
           ))}
         </div>

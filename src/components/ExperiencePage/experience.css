@@ -22,7 +22,18 @@ body {
   animation: fadeIn 1s 0.4s forwards;
 }
 
-.work-container,
+.work-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  opacity: 0;
+  animation: fadeIn 1s 0.6s forwards;
+}
+
+
 .project-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -54,7 +65,6 @@ body {
 
 .more-coming-soon {
   text-align: center;
-  grid-column: span 3;
   opacity: 0;
   animation: fadeIn 1s 1s forwards;
 }
@@ -153,39 +163,6 @@ body {
   background: #a67c52;
 }
 
-.project-container,
-.work-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  opacity: 0;
-  animation: fadeIn 1s 0.6s forwards;
-}
-
-.project-card,
-.work-card {
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  opacity: 0;
-  animation: fadeIn 1s 0.8s forwards;
-}
-
-.project-card:hover,
-.work-card:hover {
-  transform: scale(1.05);
-}
-
-.project-image {
-  width: 100%;
-  height: 200px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
 .content h2,
 .content h3,
 .content h4 {
@@ -210,11 +187,14 @@ body {
     font-size: 3em;
   }
 
-  .work-container,
-  .project-container {
-    max-width: 1400px;
+  .work-container {
+    max-width: 900px;
     margin: 0 auto;
     padding: 30px;
+  }
+
+  .project-container {
+    max-width: 1200px;
   }
 
   .work-card,
@@ -249,14 +229,5 @@ body {
 
   .popup-container {
     width: 80%;
-  }
-
-  .more-coming-soon {
-    grid-column: span 4;
-  }
-
-  .project-container,
-  .work-container {
-    grid-template-columns: repeat(4, 1fr);
   }
 }

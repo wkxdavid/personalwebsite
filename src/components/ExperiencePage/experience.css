@@ -35,6 +35,43 @@ body {
   animation: fadeIn 1s 0.6s forwards;
 }
 
+.work-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-bg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s 0.8s forwards;
+}
+
+.work-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.work-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.left-section {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.right-section {
+  text-align: right;
+  flex-shrink: 0;
+  min-width: 150px;
+  font-size: 0.9em;
+  color: var(--text-secondary);
+}
+
 .project-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

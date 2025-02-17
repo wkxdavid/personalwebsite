@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import logo from './img/dp-logo-transparent-black.jpg';
+import logo from './img/dp-logo-transparent.png';
 import {
   BrowserRouter as Router,
   Route,

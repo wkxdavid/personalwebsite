@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import logo from './img/dp-logo-transparent.png';
+import logo from './img/dp-logo-transparent-black.jpg';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import AboutPage from './pages/AboutPage/about';
 import ExperiencePage from './pages/ExperiencePage/experience';

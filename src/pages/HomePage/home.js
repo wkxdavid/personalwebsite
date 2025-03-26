@@ -51,9 +51,6 @@ function HomePage() {
             <Link to='/experience' className='home-button'>
               Work
             </Link>
-            {/* <Link to='/resume' className='home-button'>
-              Resume
-            </Link> */}
           </div>
         </div>
       </div>

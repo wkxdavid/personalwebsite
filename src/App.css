@@ -24,7 +24,6 @@
   font-size: 1.2em;
   padding: 10px 20px;
   position: relative;
-  transition: color 0.3s ease;
 }
 
 .navbar a::before {
@@ -36,7 +35,6 @@
   height: 100%;
   border: 2px solid var(--accent);
   border-radius: 5px;
-  transition: all 0.4s ease;
   box-sizing: border-box;
 }
 
@@ -89,7 +87,6 @@ body {
 .social-item p a {
   color: var(--text-secondary);
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .social-item p a:hover {
@@ -118,4 +115,19 @@ body {
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--primary-bg);
+}
+
+.loading-container p {
+  font-size: 1.2em;
+  color: var(--text-primary);
+  margin-top: 15px;
 }

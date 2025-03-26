@@ -3,13 +3,11 @@ import { workExperience, projects } from '../../utils/static';
 import './experience.css';
 
 function ExperiencePage() {
-  // Accordion state for work experiences
   const [expandedIndex, setExpandedIndex] = useState(null);
   const toggleExpand = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
-  // Popup state for projects
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const [popupContent, setPopupContent] = useState(null);
 
@@ -36,7 +34,11 @@ function ExperiencePage() {
         <h3>Click on an item to reveal more details</h3>
         <div className="work-container">
           {workExperience.map((exp, index) => (
-            <div className="work-card" onClick={() => toggleExpand(index)}>
+            <div
+              key={index}
+              className="work-card"
+              onClick={() => toggleExpand(index)}
+            >
               <div className="work-header">
                 <div className="work-title">
                   <h2>{exp.title}</h2>
@@ -47,12 +49,23 @@ function ExperiencePage() {
                   <span>{exp.date}</span>
                 </div>
               </div>
-              <div className={`work-details ${expandedIndex === index ? 'expanded' : ''}`}>
+              <div
+                className={`work-details ${expandedIndex === index ? 'expanded' : ''}`}
+              >
                 <p>{exp.description}</p>
                 {(!exp.hideTech && exp.tech) && (
-                  <p>
+                  <p className="tech-stack">
                     <strong>Tech Stack:</strong> {exp.tech}
                   </p>
+                )}
+                {exp.details && exp.details.length > 0 && (
+                  <div className="details-section">
+                    <ul className="details-list">
+                      {exp.details.map((detail, detailIndex) => (
+                        <p key={detailIndex}>{detail}</p>
+                      ))}
+                    </ul>
+                  </div>
                 )}
               </div>
             </div>

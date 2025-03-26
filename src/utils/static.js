@@ -17,7 +17,7 @@ export const workExperience = [
     location: 'Boise, ID',
     date: 'June 2023 - September 2023',
     tech: 'React, TypeScript, Java, Selenium, AWS, Jest, Enzyme',
-    details: ['HP Workforce Experience Platform'],
+    details: ['Interned under the Control Portal team on the HP Workforce Experience Platform (WXP).'],
   },
   {
     icon: faBriefcase,
@@ -26,7 +26,7 @@ export const workExperience = [
     location: 'Remote',
     date: 'January 2023 - May 2023',
     tech: 'JavaScript, Express.js, Node.js, Amazon DynamoDB',
-    details: ['Backend Maintenance'],
+    details: ['Worked on the Backend Maintenance team developing Express endpoints.'],
   },
   {
     icon: faFlask,

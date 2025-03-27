@@ -7,7 +7,19 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Senior Informatics Major @ University of Washington"
+      content="David Pham | Senior Informatics Major at the University of Washington. Passionate about software engineering, cybersecurity, and cloud computing. Explore my projects and experience!"
+    />
+    <meta
+      name="keywords"
+      content="David Pham, software engineer, informatics, University of Washington, Seattle, portfolio"
+    />
+    <meta name="author" content="David Pham" />
+    <link rel="canonical" href="https://daviddpham.com" />
+
+    <meta property="og:title" content="David Pham | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Check out my portfolio! I'm a Senior Informatics Major at UW specializing in software engineering."
     />
     <meta
       property="og:image"
@@ -15,10 +27,11 @@
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      name="twitter:card"
-      content="Senior Informatics @ University of Washington"
-    />
+    <meta property="og:url" content="https://daviddpham.com" />
+    <meta property="og:type" content="website" />
+
+    <link rel="preload" href="%PUBLIC_URL%/fonts/custom-font.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <script>
@@ -26,11 +39,7 @@
       const focusedTitle = 'Oh no, Come back!';
 
       document.addEventListener('visibilitychange', function () {
-        if (document.hidden) {
-          document.title = focusedTitle;
-        } else {
-          document.title = originalTitle;
-        }
+        document.title = document.hidden ? focusedTitle : originalTitle;
       });
     </script>
 

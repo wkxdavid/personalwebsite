@@ -12,6 +12,12 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-right: 12vw;
+
+}
+
+.App-logo {
+  padding-left: 12vw;
 }
 
 .navbar li {

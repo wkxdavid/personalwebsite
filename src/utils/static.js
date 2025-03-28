@@ -35,7 +35,7 @@ export const workExperience = [
   {
     icon: faFlask,
     title: 'Research Assistant',
-    company: 'Human Centered Design and Engineering',
+    company: 'Human Centered Design and Engineering Department',
     location: 'Seattle, WA',
     date: 'September 2023 - December 2023',
     tech: 'Python, Pandas, OpenAI GPT 4.0, Google Perspective',
@@ -60,7 +60,7 @@ export const extracurricular = [
   {
     icon: faBriefcase,
     title: 'Teaching Assistant',
-    company: 'Information School',
+    company: 'UW Information School',
     location: 'Seattle, WA',
     date: 'September 2023 - Present',
     tech: 'React, JavaScript, Express.js, Node.js, MongoDB, Azure, R, Tidyverse, Shiny, testthat',
@@ -71,7 +71,7 @@ export const extracurricular = [
   {
     icon: faBriefcase,
     title: 'Study Abroad',
-    company: 'Sungkyunkwan University via iSchool ',
+    company: 'Sungkyunkwan University',
     location: 'Seoul, South Korea',
     date: 'September 2024',
     details: [

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import { workExperience, projects } from '../../utils/static';
+import { workExperience, extracurricular, projects } from '../../utils/static';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './experience.css';
@@ -49,8 +49,8 @@ function ExperiencePage() {
   return (
     <div className="experience-page">
       <section id="experience-section" className="experience-section">
-        <h1>Experience</h1>
-        <h3>From both working or through activities while at school.</h3>
+        <h1>Work Experience</h1>
+        <h3>More professional side of work.</h3>
         <div className="work-container">
           {workExperience.map((exp, index) => (
             <div key={index} className="work-card" onClick={() => toggleExpand(index)}>
@@ -65,19 +65,37 @@ function ExperiencePage() {
                 </div>
               </div>
               <div className={`work-details ${expandedIndex === index ? 'expanded' : ''}`}>
-                <p>{exp.description}</p>
-                {(!exp.hideTech && exp.tech) && (
-                  <p className="tech-stack"><strong>Tech Stack:</strong> {exp.tech}</p>
-                )}
-                {exp.details && exp.details.length > 0 && (
-                  <div className="details-section">
-                    <ul className="details-list">
-                      {exp.details.map((detail, detailIndex) => (
-                        <p key={detailIndex}>{detail}</p>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                {exp.details.map((detail, detailIndex) => (
+                  <p key={detailIndex}>{detail}</p>
+                ))}
+                {exp.tech && <p className="tech-stack"><strong>Tech Stack:</strong> {exp.tech}</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="extracurricular-section" className="experience-section">
+        <h1>Extracurricular Activities</h1>
+        <h3>Leadership & involvement beyond work.</h3>
+        <div className="work-container">
+          {extracurricular.map((activity, index) => (
+            <div key={index} className="work-card" onClick={() => toggleExpand(index)}>
+              <div className="work-header">
+                <div className="work-title">
+                  <h2>{activity.title}</h2>
+                  <h4>{activity.company}</h4>
+                </div>
+                <div className="work-meta">
+                  <span>{activity.location}</span>
+                  <span>{activity.date}</span>
+                </div>
+              </div>
+              <div className={`work-details ${expandedIndex === index ? 'expanded' : ''}`}>
+                {activity.details.map((detail, detailIndex) => (
+                  <p key={detailIndex}>{detail}</p>
+                ))}
+                {activity.tech && <p className="tech-stack"><strong>Tech Stack:</strong> {activity.tech}</p>}
               </div>
             </div>
           ))}
@@ -86,7 +104,7 @@ function ExperiencePage() {
 
       <section id="projects-section" className="projects-section">
         <h1>Projects</h1>
-        <h3>Explore some of my work</h3>
+        <h3>Explore some of my work.</h3>
         <div className="project-slider-container">
           <Slider {...sliderSettings}>
             {projects.map((project, index) => (
@@ -104,15 +122,9 @@ function ExperiencePage() {
           <div className="popup-container">
             <button className="close-btn" onClick={closePopup}>&times;</button>
             {popupContent.image && <img src={popupContent.image} alt={popupContent.alt} className="popup-image" />}
-            <h2>{popupContent.title || popupContent.projectName}</h2>
-            <p>
-              {popupContent.description ||
-                (popupContent.details &&
-                  popupContent.details.map((detail, index) => (
-                    <span key={index}>{detail}{index < popupContent.details.length - 1 && <br />}</span>
-                  )))}
-            </p>
-            <p><strong>Tech Stack:</strong> {popupContent.tech || 'N/A'}</p>
+            <h2>{popupContent.title}</h2>
+            <p>{popupContent.description}</p>
+            {popupContent.tech && <p><strong>Tech Stack:</strong> {popupContent.tech}</p>}
           </div>
         </div>
       )}

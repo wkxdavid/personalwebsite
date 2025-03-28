@@ -23,27 +23,6 @@ export const workExperience = [
   },
   {
     icon: faBriefcase,
-    title: 'Teaching Assistant',
-    company: 'Information School',
-    location: 'Seattle, WA',
-    date: 'September 2023 - Present',
-    tech: 'React, JavaScript, Express.js, Node.js, MongoDB, Azure, R, Tidyverse, Shiny, testthat',
-    details: [
-      'Taught server-side and client-side development as well as data science concepts across multiple courses, including INFO 441, INFO 201, and INFO 340.'
-    ],
-  },
-  {
-    icon: faBriefcase,
-    title: 'Study Abroad',
-    company: 'Sungkyunkwan University via iSchool ',
-    location: 'Seoul, South Korea',
-    date: 'September 2024',
-    details: [
-      'Did an one month study abroad with SKKU students where we worked towards learning about Information, Technology, and Culture in Modern South Korea'
-    ],
-  },
-  {
-    icon: faBriefcase,
     title: 'Software Engineering Intern',
     company: 'FoodCLUB',
     location: 'Remote',
@@ -75,12 +54,46 @@ export const workExperience = [
       'Developed interactive front-end components for WordPlay, an educational coding language, using TypeScript, Svelte, and Firebase.'
     ],
   },
+];
+
+export const extracurricular = [
   {
     icon: faBriefcase,
-    title: 'Leadership',
-    company: 'SWECC, Valorant @ UW',
+    title: 'Teaching Assistant',
+    company: 'Information School',
+    location: 'Seattle, WA',
+    date: 'September 2023 - Present',
+    tech: 'React, JavaScript, Express.js, Node.js, MongoDB, Azure, R, Tidyverse, Shiny, testthat',
+    details: [
+      'Taught server-side and client-side development as well as data science concepts across multiple courses, including INFO 441, INFO 201, and INFO 340.'
+    ],
+  },
+  {
+    icon: faBriefcase,
+    title: 'Study Abroad',
+    company: 'Sungkyunkwan University via iSchool ',
+    location: 'Seoul, South Korea',
+    date: 'September 2024',
+    details: [
+      'Did an one month study abroad with SKKU students where we worked towards learning about Information, Technology, and Culture in Modern South Korea'
+    ],
+  },
+  {
+    icon: faBriefcase,
+    title: 'President',
+    company: 'Valorant @ UW',
     location: 'University of Washington',
     date: 'September 2021 - Present',
+    details: [
+      'Managed the Mentorship Program at SWECC and served as the President of Valorant @ UW, leading initiatives to mentor students and gaming communities.'
+    ],
+  },
+  {
+    icon: faBriefcase,
+    title: 'Mentorship Program Manager',
+    company: 'Software Enginnering Career Club (SWECC)',
+    location: 'University of Washington',
+    date: 'June 2022 - Present',
     details: [
       'Managed the Mentorship Program at SWECC and served as the President of Valorant @ UW, leading initiatives to mentor students and gaming communities.'
     ],

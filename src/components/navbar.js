@@ -1,27 +1,30 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import logo from "../img/dp-logo-transparent-black.jpg";
 
-function Navbar() {
-  const location = useLocation();
-  if (location.pathname === '/') {
-    return null;
-  }
+function Navbar({ homeRef, scrollToSection, refs }) {
+  const handleClick = (section) => {
+    scrollToSection(refs[section]);
+  };
 
   return (
-    <nav className='navbar'>
+    <nav className="navbar">
+
+      <img
+        src={logo}
+        className="App-logo"
+        alt="logo"
+        onClick={() => scrollToSection(homeRef)}
+      />      
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <button onClick={() => handleClick('homeRef')}>Home</button>
         </li>
         <li>
-          <Link to='/about'>About</Link>
+          <button onClick={() => handleClick('aboutRef')}>About</button>
         </li>
         <li>
-          <Link to='/experience'>Work</Link>
+          <button onClick={() => handleClick('experienceRef')}>Work</button>
         </li>
-        {/* <li>
-          <Link to='/resume'>Resume</Link>
-        </li> */}
       </ul>
     </nav>
   );

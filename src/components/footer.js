@@ -1,12 +1,12 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 
 function Footer() {
-  const location = useLocation();
-  if (location.pathname === '/') {
-    return null;
-  }
+  // const location = useLocation();
+  // if (location.pathname === '/') {
+  //   return null;
+  // }
 
   return (
     <footer className='App-footer'>

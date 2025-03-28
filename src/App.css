@@ -1,39 +1,48 @@
-.App-header {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0 !important;
+  z-index: 1000; 
   background-color: var(--secondary-bg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between; /* Distribute space between logo and buttons */
+  align-items: center; /* Vertically center content */
 }
 
-.navbar {
-  padding: 20px 0;
+.App-logo {
+  padding-left: 12vw; /* Adjust this value as needed */
+  cursor: pointer;
 }
 
 .navbar ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* Align buttons to the right */
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-right: 12vw;
-
-}
-
-.App-logo {
-  padding-left: 12vw;
+  padding-right: 12vw; /* Adjust padding for spacing on the right */
 }
 
 .navbar li {
   margin: 0 15px;
 }
 
-.navbar a {
-  color: var(--text-primary);
+.navbar button {
+  background: none;
+  border: none;
+  color: var(--text-primary) !important;
   text-decoration: none;
   font-size: 1.2em;
   padding: 10px 20px;
+  cursor: pointer;
   position: relative;
   transition: color 0.3s ease;
 }
 
-.navbar a::before {
+.navbar button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -46,15 +55,21 @@
   box-sizing: border-box;
 }
 
-.navbar a:hover::before {
+.navbar button:hover::before {
   width: 100%;
 }
+
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: var(--primary-bg);
   color: var(--text-primary);
+  overflow: auto;
+}
+
+html {
+  overflow: auto;
 }
 
 .App-footer {
@@ -112,16 +127,6 @@ body {
 
 .App-footer p a:hover {
   color: var(--accent);
-}
-
-html,
-body {
-  overflow: hidden;
-}
-
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none;
 }
 
 .loading-container {

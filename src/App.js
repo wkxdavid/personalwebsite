@@ -1,41 +1,36 @@
-import React from 'react';
-import './App.css';
-import logo from './img/dp-logo-transparent-black.jpg';
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
-import AboutPage from './pages/AboutPage/about';
-import ExperiencePage from './pages/ExperiencePage/experience';
-import HomePage from './pages/HomePage/home';
-import Footer from './components/footer';
-import Navbar from './components/navbar';
-
-function Header() {
-  const location = useLocation();
-  if (location.pathname === '/') {
-    return null;
-  }
-  return (
-    <header className='App-header'>
-      <Link to='/'>
-        <img src={logo} className='App-logo' alt='logo' />
-      </Link>
-      <Navbar />
-    </header>
-  );
-}
+import React, { useRef } from "react";
+import "./App.css";
+import Footer from "./components/footer";
+import Navbar from "./components/navbar";
+import AboutPage from "./pages/AboutPage/about";
+import ExperiencePage from "./pages/ExperiencePage/experience";
+import HomePage from "./pages/HomePage/home";
 
 function App() {
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <Router>
-      <div className='App'>
-        <Header />
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/about' element={<AboutPage />} />
-          <Route path='/experience' element={<ExperiencePage />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div className="App">
+      <header className="App-header">
+        <Navbar scrollToSection={scrollToSection} refs={{ homeRef, aboutRef, experienceRef }} />
+      </header>
+      <section ref={homeRef}>
+        <HomePage scrollToSection={scrollToSection} refs={{ homeRef, aboutRef, experienceRef }} />
+      </section>
+      <section ref={aboutRef}>
+        <AboutPage />
+      </section>
+      <section ref={experienceRef}>
+        <ExperiencePage />
+      </section>
+      <Footer />
+    </div>
   );
 }
 

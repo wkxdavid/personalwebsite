@@ -75,7 +75,7 @@ export const extracurricular = [
     location: 'Seoul, South Korea',
     date: 'September 2024',
     details: [
-      'Did an one month study abroad with SKKU students where we worked towards learning about Information, Technology, and Culture in Modern South Korea'
+      'Did an one month study abroad with SKKU students where we worked towards learning about Information, Technology, and Culture in Modern South Korea.'
     ],
   },
   {
@@ -85,7 +85,7 @@ export const extracurricular = [
     location: 'University of Washington',
     date: 'September 2021 - Present',
     details: [
-      'Managed the Mentorship Program at SWECC and served as the President of Valorant @ UW, leading initiatives to mentor students and gaming communities.'
+      'Led tournaments and community events around Valorant for 100+ people.'
     ],
   },
   {
@@ -95,7 +95,7 @@ export const extracurricular = [
     location: 'University of Washington',
     date: 'June 2022 - Present',
     details: [
-      'Managed the Mentorship Program at SWECC and served as the President of Valorant @ UW, leading initiatives to mentor students and gaming communities.'
+      'Led the foundation for the Student Mentorship Program (SMP) to help connect students pursing SWE around campus.'
     ],
   },
 ];

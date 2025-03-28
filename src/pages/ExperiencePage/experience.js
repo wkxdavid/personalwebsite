@@ -50,7 +50,7 @@ function ExperiencePage() {
     <div className="experience-page">
       <section id="experience-section" className="experience-section">
         <h1>Work Experience</h1>
-        <h3>More professional side of work.</h3>
+        <h3>More professional side of work</h3>
         <div className="work-container">
           {workExperience.map((exp, index) => (
             <div key={index} className="work-card" onClick={() => toggleExpand(index)}>
@@ -77,7 +77,7 @@ function ExperiencePage() {
 
       <section id="extracurricular-section" className="experience-section">
         <h1>Extracurricular Activities</h1>
-        <h3>Leadership & involvement beyond work.</h3>
+        <h3>Leadership & involvement beyond work</h3>
         <div className="work-container">
           {extracurricular.map((activity, index) => (
             <div key={index} className="work-card" onClick={() => toggleExpand(index)}>
@@ -104,7 +104,7 @@ function ExperiencePage() {
 
       <section id="projects-section" className="projects-section">
         <h1>Projects</h1>
-        <h3>Explore some of my work.</h3>
+        <h3>Explore some of my work</h3>
         <div className="project-slider-container">
           <Slider {...sliderSettings}>
             {projects.map((project, index) => (

@@ -13,13 +13,14 @@ code {
 }
 
 :root {
-  --primary-bg: #FAFAFA;
-  --secondary-bg: #EDEDED;
-  --accent: #2F6FED;
-  --text-primary: #1E1E1E;
-  --text-secondary: #606060;
-  --border-color: #D1D1D1;
+  --primary-bg: #F5F5F0;
+  --secondary-bg: #EAE7DC;
+  --accent: #001F3F;
+  --text-primary: #0A0A0A;
+  --text-secondary: #4A4A4A;
+  --border-color: #778899;
 }
+
 
 
 body {

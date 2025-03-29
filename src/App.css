@@ -8,22 +8,22 @@
   background-color: var(--secondary-bg);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-between; /* Distribute space between logo and buttons */
-  align-items: center; /* Vertically center content */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .App-logo {
-  padding-left: 12vw; /* Adjust this value as needed */
+  padding-left: 12vw;
   cursor: pointer;
 }
 
 .navbar ul {
   display: flex;
-  justify-content: flex-end; /* Align buttons to the right */
+  justify-content: flex-end;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-right: 12vw; /* Adjust padding for spacing on the right */
+  padding-right: 12vw;
 }
 
 .navbar li {

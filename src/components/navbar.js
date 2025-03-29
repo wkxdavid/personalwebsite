@@ -8,12 +8,11 @@ function Navbar({ homeRef, scrollToSection, refs }) {
 
   return (
     <nav className="navbar">
-
       <img
         src={logo}
         className="App-logo"
         alt="logo"
-        onClick={() => scrollToSection(homeRef)}
+        onClick={() => scrollToSection("homeRef")}
       />      
       <ul>
         <li>

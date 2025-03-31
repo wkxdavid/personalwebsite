@@ -15,36 +15,41 @@ function HomePage({ scrollToSection, refs }) {
           <h2>Software Engineer</h2>
           <div className="contact-info">
             <div className="link-item">
+            <a href="mailto:phamdavid722@gmail.com">
+
               <FaEnvelope size={30} />
               <p>
-                <a href="mailto:phamdavid722@gmail.com">
                   phamdavid722@gmail.com
-                </a>
               </p>
+            </a>
             </div>
             <div className="link-item">
-              <FaLinkedin size={30} />
-              <p>
-                <a
+            <a
                   href="https://www.linkedin.com/in/phamdavid722"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+              <FaLinkedin size={30} />
+              <p>
+
                   phamdavid722
-                </a>
               </p>
+              </a>
+
             </div>
             <div className="link-item">
-              <FaGithub size={30} />
-              <p>
-                <a
+            <a
                   href="https://github.com/wkxdavid"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+              <FaGithub size={30} />
+              <p>
+
                   wkxdavid
-                </a>
               </p>
+              </a>
+
             </div>
           </div>
           <div className="home-buttons">

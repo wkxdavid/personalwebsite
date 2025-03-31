@@ -32,11 +32,11 @@ function Navbar({ homeRef, scrollToSection, refs }) {
         <a href='mailto:phamdavid722@gmail.com' target="_blank" rel="noopener noreferrer">
           <FaEnvelope size={30} />
         </a>
-        <a href='https://github.com/wkxdavid' target="_blank" rel="noopener noreferrer">
-          <FaGithub size={30} />
-        </a>
         <a href='https://www.linkedin.com/in/phamdavid722' target="_blank" rel="noopener noreferrer">
           <FaLinkedin size={30} />
+        </a>
+        <a href='https://github.com/wkxdavid' target="_blank" rel="noopener noreferrer">
+          <FaGithub size={30} />
         </a>
       </div>
     </nav>

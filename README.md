@@ -1,7 +1,13 @@
-# David Pham Personal Website
+# David Pham Personal Website  
 
-### To Run
+This is my personal portfolio website built with React. I change it often to explore different ways to present myself.
 
-`npm start`
+## 🚀 To Run Locally  
 
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/wkxdavid/personalwebsite.git
+   cd personalwebsite
+   npm install
+   npm start
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.

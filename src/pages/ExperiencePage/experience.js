@@ -38,8 +38,6 @@ function ExperiencePage() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    centerMode: true,
-    centerPadding: '0',
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 600, settings: { slidesToShow: 1 } },
@@ -47,69 +45,103 @@ function ExperiencePage() {
   };
 
   return (
-    <div className="experience-page">
-      <section id="experience-section" className="experience-section">
+    <div className='experience-page'>
+      <section id='experience-section' className='experience-section'>
         <h1>Work Experience</h1>
-        <h3>More professional side of work</h3>
-        <div className="work-container">
+        <h3>Technical content</h3>
+        <div className='work-container'>
           {workExperience.map((exp, index) => (
-            <div key={index} className="work-card" onClick={() => toggleExpand(index)}>
-              <div className="work-header">
-                <div className="work-title">
+            <div
+              key={index}
+              className='work-card'
+              onClick={() => toggleExpand(index)}
+            >
+              <div className='work-header'>
+                <div className='work-title'>
                   <h2>{exp.title}</h2>
                   <h4>{exp.company}</h4>
                 </div>
-                <div className="work-meta">
+                <div className='work-meta'>
                   <span>{exp.location}</span>
                   <span>{exp.date}</span>
                 </div>
               </div>
-              <div className={`work-details ${expandedIndex === index ? 'expanded' : ''}`}>
+              <div
+                className={`work-details ${
+                  expandedIndex === index ? 'expanded' : ''
+                }`}
+              >
                 {exp.details.map((detail, detailIndex) => (
                   <p key={detailIndex}>{detail}</p>
                 ))}
-                {exp.tech && <p className="tech-stack"><strong>Tech Stack:</strong> {exp.tech}</p>}
+                {exp.tech && (
+                  <p className='tech-stack'>
+                    <strong>Tech Stack:</strong> {exp.tech}
+                  </p>
+                )}
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="extracurricular-section" className="experience-section">
+      <section id='extracurricular-section' className='experience-section'>
         <h1>Extracurricular Activities</h1>
-        <h3>Leadership & involvement beyond work</h3>
-        <div className="work-container">
+        <h3>Leadership & involvements</h3>
+        <div className='work-container'>
           {extracurricular.map((activity, index) => (
-            <div key={index} className="work-card" onClick={() => toggleExpand(index)}>
-              <div className="work-header">
-                <div className="work-title">
+            <div
+              key={index}
+              className='work-card'
+              onClick={() => toggleExpand(index)}
+            >
+              <div className='work-header'>
+                <div className='work-title'>
                   <h2>{activity.title}</h2>
                   <h4>{activity.company}</h4>
                 </div>
-                <div className="work-meta">
+                <div className='work-meta'>
                   <span>{activity.location}</span>
                   <span>{activity.date}</span>
                 </div>
               </div>
-              <div className={`work-details ${expandedIndex === index ? 'expanded' : ''}`}>
+              <div
+                className={`work-details ${
+                  expandedIndex === index ? 'expanded' : ''
+                }`}
+              >
                 {activity.details.map((detail, detailIndex) => (
                   <p key={detailIndex}>{detail}</p>
                 ))}
-                {activity.tech && <p className="tech-stack"><strong>Tech Stack:</strong> {activity.tech}</p>}
+                {activity.tech && (
+                  <p className='tech-stack'>
+                    <strong>Tech Stack:</strong> {activity.tech}
+                  </p>
+                )}
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="projects-section" className="projects-section">
+      <section id='projects-section' className='projects-section'>
         <h1>Projects</h1>
         <h3>Explore some of my work</h3>
-        <div className="project-slider-container">
+        <div className='project-slider-container'>
           <Slider {...sliderSettings}>
             {projects.map((project, index) => (
-              <div key={index} className="project-card" onClick={() => openPopup(project)}>
-                {project.image && <img src={project.image} alt={project.alt} className="project-image" />}
+              <div
+                key={index}
+                className='project-card'
+                onClick={() => openPopup(project)}
+              >
+                {project.image && (
+                  <img
+                    src={project.image}
+                    alt={project.alt}
+                    className='project-image'
+                  />
+                )}
                 <h2>{project.title}</h2>
               </div>
             ))}
@@ -118,13 +150,25 @@ function ExperiencePage() {
       </section>
 
       {isPopupVisible && (
-        <div className="popup-overlay active" onClick={handleOverlayClick}>
-          <div className="popup-container">
-            <button className="close-btn" onClick={closePopup}>&times;</button>
-            {popupContent.image && <img src={popupContent.image} alt={popupContent.alt} className="popup-image" />}
+        <div className='popup-overlay active' onClick={handleOverlayClick}>
+          <div className='popup-container'>
+            <button className='close-btn' onClick={closePopup}>
+              &times;
+            </button>
+            {popupContent.image && (
+              <img
+                src={popupContent.image}
+                alt={popupContent.alt}
+                className='popup-image'
+              />
+            )}
             <h2>{popupContent.title}</h2>
             <p>{popupContent.description}</p>
-            {popupContent.tech && <p><strong>Tech Stack:</strong> {popupContent.tech}</p>}
+            {popupContent.tech && (
+              <p>
+                <strong>Tech Stack:</strong> {popupContent.tech}
+              </p>
+            )}
           </div>
         </div>
       )}

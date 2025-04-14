@@ -1,41 +1,53 @@
 import React from 'react';
-import logo from "../img/dp-logo-transparent-black.jpg";
+import logo from '../img/dp-logo-transparent-black.jpg';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
-function Navbar({ homeRef, scrollToSection, refs }) {
+function Navbar({ scrollToSection, refs }) {
   const handleClick = (section) => {
     scrollToSection(refs[section]);
   };
 
   return (
-    <nav className="navbar">
+    <nav className='navbar'>
       <img
         src={logo}
-        className="App-logo"
-        alt="logo"
-        onClick={() => scrollToSection("homeRef")}
+        className='App-logo'
+        alt='logo'
+        onClick={() => handleClick('home')}
       />
 
-      <ul className="nav-links">
+      <ul className='nav-links'>
         <li>
-          <button onClick={() => handleClick('homeRef')}>Home</button>
+          <button onClick={() => handleClick('home')}>Home</button>
         </li>
         <li>
-          <button onClick={() => handleClick('aboutRef')}>About</button>
+          <button onClick={() => handleClick('about')}>About</button>
         </li>
         <li>
-          <button onClick={() => handleClick('experienceRef')}>Work</button>
+          <button onClick={() => handleClick('experience')}>Work</button>
         </li>
       </ul>
 
-      <div className="social-icons">
-        <a href='mailto:phamdavid722@gmail.com' target="_blank" rel="noopener noreferrer">
+      <div className='social-icons'>
+        <a
+          href='mailto:phamdavid722@gmail.com'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <FaEnvelope size={30} />
         </a>
-        <a href='https://www.linkedin.com/in/phamdavid722' target="_blank" rel="noopener noreferrer">
+        <a
+          href='https://www.linkedin.com/in/phamdavid722'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <FaLinkedin size={30} />
         </a>
-        <a href='https://github.com/wkxdavid' target="_blank" rel="noopener noreferrer">
+        <a
+          href='https://github.com/wkxdavid'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <FaGithub size={30} />
         </a>
       </div>

@@ -61,16 +61,24 @@ function App() {
 
   return (
     <div className='App'>
-      {showNavbar && (
+      {/* {showNavbar && (
         <header className='App-header'>
-          <div className='navbar-container'>
+          <div
+            className={`navbar-container ${
+              showNavbar ? 'fade-in' : 'fade-out'
+            }`}
+          >
             <Navbar
               scrollToSection={scrollToSection}
-              refs={{ homeRef, aboutRef, experienceRef }}
+              refs={{
+                home: homeRef,
+                about: aboutRef,
+                experience: experienceRef,
+              }}
             />
           </div>
         </header>
-      )}
+      )} */}
 
       <section id='home' ref={homeRef}>
         <HomePage

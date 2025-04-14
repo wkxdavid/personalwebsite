@@ -1,6 +1,7 @@
 import React from 'react';
 import './home.css';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import ParticleBackground from '../../components/particleBackground';
 
 function HomePage({ scrollToSection, refs }) {
   const handleScrollTo = (section) => {
@@ -9,6 +10,8 @@ function HomePage({ scrollToSection, refs }) {
 
   return (
     <section id='home-section' className='home-section'>
+      <ParticleBackground />
+
       <div className='home-container'>
         <div className='home-text'>
           <h1>David Pham</h1>

@@ -30,10 +30,22 @@ body {
   color: var(--text-primary);
 }
 
-.home-buttons {
-  margin-top: 20px;
-  opacity: 0;
-  animation: fadeIn 1.5s 1.5s forwards;
+.home-button {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 10px;
+  text-decoration: none;
+  background-color: var(--accent);
+  color: var(--primary-bg);
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, filter 300ms ease;
+  will-change: filter;
+}
+
+.home-button:hover {
+  background-color: var(--border-color);
+  filter: drop-shadow(0 0 1.5em var(--border-color));
 }
 
 .home-button {
@@ -71,17 +83,16 @@ body {
   padding-left: 10px;
 }
 
-
 .link-item a {
-  color: var(--text-primary); 
+  color: var(--text-primary);
   text-decoration: none;
-  display: flex; 
+  display: flex;
   align-items: center;
   transition: color 0.3s ease;
 }
 
 .link-item a:hover {
-  color: var(--accent); 
+  color: var(--accent);
 }
 
 .link-item p {
@@ -119,7 +130,7 @@ body {
   }
 
   .link-item {
-    flex-direction: row; 
+    flex-direction: row;
   }
 
   .link-item p {

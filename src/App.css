@@ -68,7 +68,7 @@
   padding-right: 12vw;
 }
 
-.social-icons a {  
+.social-icons a {
   color: var(--text-primary);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -77,7 +77,6 @@
 .social-icons a:hover {
   color: var(--accent);
 }
-
 
 body {
   margin: 0;
@@ -89,6 +88,30 @@ body {
 
 html {
   overflow: auto;
+}
+
+.navbar-container {
+  transition: opacity 0.4s ease;
+}
+
+.App-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.App-header.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.App-header.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .App-footer {

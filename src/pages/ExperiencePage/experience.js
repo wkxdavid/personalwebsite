@@ -126,7 +126,7 @@ function ExperiencePage() {
 
       <section id='projects-section' className='projects-section'>
         <h1>Projects</h1>
-        <h3>Explore some of my work</h3>
+        <h3>Turning ideas into code</h3>
         <div className='project-slider-container'>
           <Slider {...sliderSettings}>
             {projects.map((project, index) => (

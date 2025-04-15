@@ -19,6 +19,8 @@
 
 .experience-section h3 {
   font-size: 1.2em;
+  font-weight: normal;
+  font-size: 1.2em;
   margin-bottom: 30px;
   color: var(--text-secondary);
 }
@@ -42,7 +44,7 @@
 
 .work-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
 .work-header {
@@ -88,7 +90,7 @@
 
 .work-details.expanded {
   padding-top: 10px;
-  max-height: 350px; 
+  max-height: 350px;
 }
 
 .tech-stack {
@@ -118,11 +120,11 @@
 }
 
 .details-section li {
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .details-list li::marker {
-  color: #2980b9; 
+  color: #2980b9;
 }
 
 #projects-section {
@@ -158,7 +160,7 @@
 }
 
 .project-card:hover {
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h2 {
@@ -196,7 +198,7 @@
 
 .projects-section h3 {
   font-size: 1.2em;
-  font-weight: normal; 
+  font-weight: normal;
   text-align: center;
   color: var(--text-secondary);
   margin-bottom: 30px;
@@ -207,7 +209,7 @@
   padding: 30px;
   border-radius: 10px;
   max-width: 70%;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   position: relative;
   animation: popupFadeIn 0.3s ease-out;
 }

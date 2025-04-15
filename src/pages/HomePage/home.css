@@ -15,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--primary-bg);
+  background-color: var(--home-bg);
   opacity: 0;
   animation: fadeIn 1s forwards;
 }
@@ -39,6 +39,9 @@ body {
 .home-text h1 {
   font-size: 3em;
   margin-bottom: 20px;
+  color: var(--text-primary);
+}
+.home-text h2 {
   color: var(--text-primary);
 }
 
@@ -161,4 +164,19 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+.home-section {
+  --text-primary: #ffffff;
+  --text-secondary: #aaaaaa;
+  --accent: #64ffda;
+  --border-color: #64ffda;
+}
+
+.home-section .link-item p {
+  color: var(--text-secondary);
+}
+
+.home-section .home-button {
+  color: #0d1117;
 }

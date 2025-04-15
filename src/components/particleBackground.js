@@ -14,15 +14,15 @@ export default function ParticleBackground() {
       options={{
         fullScreen: { enable: false },
         background: {
-          color: { value: '#F5F5F0' },
+          color: { value: 'transparent' },
         },
         particles: {
-          color: { value: '#778899' },
+          color: { value: '#64ffda' },
           links: {
             enable: true,
-            color: '#778899',
+            color: '#64ffda',
             distance: 150,
-            opacity: 0.5,
+            opacity: 0.3,
             width: 1,
           },
           move: { enable: true, speed: 1 },
@@ -30,9 +30,9 @@ export default function ParticleBackground() {
             value: 60,
             density: { enable: true, area: 800 },
           },
-          opacity: { value: 0.4 },
+          opacity: { value: 0.2 },
           shape: { type: 'circle' },
-          size: { value: { min: 1, max: 5 } },
+          size: { value: { min: 1, max: 4 } },
         },
         detectRetina: true,
       }}

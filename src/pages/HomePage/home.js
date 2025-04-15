@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './home.css';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import ParticleBackground from '../../components/particleBackground';
 
 function HomePage({ scrollToSection, refs }) {
+  useEffect(() => {
+    document.body.classList.add('home-body');
+    return () => {
+      document.body.classList.remove('home-body');
+    };
+  }, []);
+
   const handleScrollTo = (section) => {
     scrollToSection(refs[section]);
   };

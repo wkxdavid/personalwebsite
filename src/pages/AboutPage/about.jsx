@@ -1,5 +1,5 @@
 import React from 'react';
-import Personal from '../../img/DavidPham.JPG';
+import Personal from '../../img/DavidPham.jpg';
 import './about.css';
 import { aboutContent } from '../../utils/static';
 function AboutPage() {

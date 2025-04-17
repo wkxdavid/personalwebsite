@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import AboutPage from './pages/AboutPage/about';
 import ExperiencePage from './pages/ExperiencePage/experience';
 import HomePage from './pages/HomePage/home';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const homeRef = useRef(null);
@@ -93,6 +94,7 @@ function App() {
         <ExperiencePage />
       </section>
       <Footer />
+      <Analytics />
     </div>
   );
 }

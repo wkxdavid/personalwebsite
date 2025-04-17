@@ -1,5 +1,5 @@
 import React from 'react';
-import Personal from '../../img/DavidPham.jpg';
+import personalImage from '../../img/DavidPham.jpg';
 import './about.css';
 import { aboutContent } from '../../utils/static';
 function AboutPage() {
@@ -13,7 +13,7 @@ function AboutPage() {
           <p>{aboutContent.leadership}</p>
         </div>
         <div className='about-image'>
-          <img src={Personal} alt='David Pham' />
+          <img src={personalImage} alt='David Pham' />
         </div>
       </div>
     </section>

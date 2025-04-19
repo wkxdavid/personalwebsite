@@ -1,15 +1,16 @@
 import React from 'react';
 import Particles from 'react-tsparticles';
+import type { Engine } from 'tsparticles-engine';
 import { loadSlim } from 'tsparticles-slim';
 
-export default function ParticleBackground() {
-  const particlesInit = async (main) => {
+const ParticleBackground: React.FC = () => {
+  const particlesInit = async (main: Engine): Promise<void> => {
     await loadSlim(main);
   };
 
   return (
     <Particles
-      id='tsparticles'
+      id="tsparticles"
       init={particlesInit}
       options={{
         fullScreen: { enable: false },
@@ -38,4 +39,6 @@ export default function ParticleBackground() {
       }}
     />
   );
-}
+};
+
+export default ParticleBackground;

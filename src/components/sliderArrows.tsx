@@ -1,7 +1,13 @@
 import React from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-const arrowBaseStyle = {
+interface ArrowProps {
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+}
+
+const arrowBaseStyle: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -20,13 +26,13 @@ const arrowBaseStyle = {
   opacity: 0.9,
 };
 
-const hoverStyle = {
+const hoverStyle: React.CSSProperties = {
   transform: 'translateY(-50%) scale(1.1)',
   boxShadow: '0 0 10px var(--accent)',
   opacity: 1,
 };
 
-export const NextArrow = ({ className, style, onClick }) => {
+export const NextArrow: React.FC<ArrowProps> = ({ className, style, onClick }) => {
   const [hovered, setHovered] = React.useState(false);
 
   return (
@@ -47,7 +53,7 @@ export const NextArrow = ({ className, style, onClick }) => {
   );
 };
 
-export const PrevArrow = ({ className, style, onClick }) => {
+export const PrevArrow: React.FC<ArrowProps> = ({ className, style, onClick }) => {
   const [hovered, setHovered] = React.useState(false);
 
   return (

@@ -2,21 +2,30 @@ import React from 'react';
 import logo from '../img/dp-logo-transparent-black.jpg';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
-function Navbar({ scrollToSection, refs }) {
-  const handleClick = (section) => {
+interface NavbarProps {
+  scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
+  refs: {
+    home: React.RefObject<HTMLElement>;
+    about: React.RefObject<HTMLElement>;
+    experience: React.RefObject<HTMLElement>;
+  };
+}
+
+const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs }) => {
+  const handleClick = (section: keyof typeof refs) => {
     scrollToSection(refs[section]);
   };
 
   return (
-    <nav className='navbar'>
+    <nav className="navbar">
       <img
         src={logo}
-        className='App-logo'
-        alt='logo'
+        className="App-logo"
+        alt="logo"
         onClick={() => handleClick('home')}
       />
 
-      <ul className='nav-links'>
+      <ul className="nav-links">
         <li>
           <button onClick={() => handleClick('home')}>Home</button>
         </li>
@@ -28,31 +37,31 @@ function Navbar({ scrollToSection, refs }) {
         </li>
       </ul>
 
-      <div className='social-icons'>
+      <div className="social-icons">
         <a
-          href='mailto:phamdavid722@gmail.com'
-          target='_blank'
-          rel='noopener noreferrer'
+          href="mailto:phamdavid722@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <FaEnvelope size={30} />
         </a>
         <a
-          href='https://www.linkedin.com/in/phamdavid722'
-          target='_blank'
-          rel='noopener noreferrer'
+          href="https://www.linkedin.com/in/phamdavid722"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <FaLinkedin size={30} />
         </a>
         <a
-          href='https://github.com/wkxdavid'
-          target='_blank'
-          rel='noopener noreferrer'
+          href="https://github.com/wkxdavid"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <FaGithub size={30} />
         </a>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

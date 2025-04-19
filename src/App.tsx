@@ -1,26 +1,26 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, RefObject } from 'react';
 import './App.css';
 import Footer from './components/footer';
-import Navbar from './components/navbar';
+// import Navbar from './components/navbar';
 import AboutPage from './pages/AboutPage/about';
 import ExperiencePage from './pages/ExperiencePage/experience';
 import HomePage from './pages/HomePage/home';
 import { Analytics } from '@vercel/analytics/react';
 
 function App() {
-  const homeRef = useRef(null);
-  const aboutRef = useRef(null);
-  const experienceRef = useRef(null);
+  const homeRef = useRef<HTMLElement | null>(null);
+  const aboutRef = useRef<HTMLElement | null>(null);
+  const experienceRef = useRef<HTMLElement | null>(null);
   const [visibleSection, setVisibleSection] = useState('home');
   const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {
-    const observerOptions = {
+    const observerOptions: IntersectionObserverInit = {
       root: null,
       threshold: 0.5,
     };
 
-    const observerCallback = (entries) => {
+    const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setVisibleSection(entry.target.id);
@@ -28,10 +28,7 @@ function App() {
       });
     };
 
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
 
     const homeNode = homeRef.current;
     const aboutNode = aboutRef.current;
@@ -49,21 +46,17 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (visibleSection === 'about' || visibleSection === 'experience') {
-      setShowNavbar(true);
-    } else {
-      setShowNavbar(false);
-    }
+    setShowNavbar(visibleSection === 'about' || visibleSection === 'experience');
   }, [visibleSection]);
 
-  const scrollToSection = (ref) => {
+  const scrollToSection = (ref: RefObject<HTMLElement>) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <div className='App'>
+    <div className="App">
       {/* {showNavbar && (
-        <header className='App-header'>
+        <header className="App-header">
           <div
             className={`navbar-container ${
               showNavbar ? 'fade-in' : 'fade-out'
@@ -81,16 +74,16 @@ function App() {
         </header>
       )} */}
 
-      <section id='home' ref={homeRef}>
+      <section id="home" ref={homeRef}>
         <HomePage
           scrollToSection={scrollToSection}
           refs={{ homeRef, aboutRef, experienceRef }}
         />
       </section>
-      <section id='about' ref={aboutRef}>
+      <section id="about" ref={aboutRef}>
         <AboutPage />
       </section>
-      <section id='experience' ref={experienceRef}>
+      <section id="experience" ref={experienceRef}>
         <ExperiencePage />
       </section>
       <Footer />

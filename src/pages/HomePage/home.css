@@ -16,6 +16,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: var(--home-bg);
+  color: var(--text-primary);
   opacity: 0;
   animation: fadeIn 1s forwards;
 }
@@ -39,34 +40,44 @@ body {
 .home-text h1 {
   font-size: 3em;
   margin-bottom: 20px;
-  color: var(--text-primary);
+  color: #ffffff;
 }
+
 .home-text h2 {
-  color: var(--text-primary);
+  color: var(--primary-bg);
+}
+
+.home-buttons {
+  margin-top: 20px;
 }
 
 .home-button {
   display: inline-block;
   padding: 12px 25px;
   margin: 10px;
+  font-size: 1.2em;
   text-decoration: none;
   background-color: var(--accent);
-  color: var(--primary-bg);
-  border-radius: 5px;
-  font-size: 1.2em;
-  transition: background-color 0.3s ease, filter 300ms ease;
+  color: #fdfdfc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, filter 0.3s ease;
   will-change: filter;
 }
 
 .home-button:hover {
-  background-color: var(--border-color);
-  filter: drop-shadow(0 0 1.5em var(--border-color));
+  background-color: #3b82f6; 
+  filter: drop-shadow(0 0 1.5em rgba(59, 130, 246, 0.4));
 }
 
 .contact-info {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .link-item {
@@ -74,16 +85,8 @@ body {
   align-items: center;
 }
 
-.link-item p {
-  margin: 0;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-}
-
 .link-item a {
-  color: var(--text-primary);
+  color: #ffffff;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -96,6 +99,7 @@ body {
 
 .link-item p {
   margin: 0;
+  padding-left: 10px;
   color: var(--text-secondary);
   display: flex;
   align-items: center;
@@ -164,19 +168,4 @@ body {
   100% {
     opacity: 1;
   }
-}
-
-.home-section {
-  --text-primary: #ffffff;
-  --text-secondary: #aaaaaa;
-  --accent: #64ffda;
-  --border-color: #64ffda;
-}
-
-.home-section .link-item p {
-  color: var(--text-secondary);
-}
-
-.home-section .home-button {
-  color: #0d1117;
 }

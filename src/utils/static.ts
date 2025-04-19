@@ -117,6 +117,16 @@ export const extracurricular = [
       'Led the foundation for the Student Mentorship Program (SMP) to help connect students pursing SWE around campus.',
     ],
   },
+  {
+    icon: faBriefcase,
+    title: 'Volunteer',
+    company: 'MathCounts',
+    location: 'Washington',
+    date: 'June 2022 - Present',
+    details: [
+      'Volunteered as grader and proctor for the Mathcounts competition.',
+    ],
+  },
 ];
 
 export const projects = [

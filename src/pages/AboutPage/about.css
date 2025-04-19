@@ -61,7 +61,7 @@ body {
 .about-detail-section {
   margin-top: 20px;
   padding-left: 10px;
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--border-color);
   animation: fadeSlideUp 1.2s ease-in-out;
 }
 

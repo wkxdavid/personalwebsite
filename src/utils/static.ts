@@ -9,6 +9,23 @@ import {
   MemoryMentor,
 } from '../img';
 
+export interface ExperienceItem {
+  title: string;
+  company: string;
+  location: string;
+  date: string;
+  details: string[];
+  tech?: string;
+}
+
+export interface ProjectItem {
+  title: string;
+  description: string;
+  tech?: string;
+  image?: string;
+  alt?: string;
+}
+
 export const workExperience = [
   {
     icon: faBriefcase,

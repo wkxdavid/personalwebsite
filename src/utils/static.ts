@@ -24,6 +24,8 @@ export interface ProjectItem {
   tech?: string;
   image?: string;
   alt?: string;
+  link?: string;
+
 }
 
 export const workExperience = [
@@ -179,7 +181,7 @@ export const projects = [
 export const aboutContent = {
   greeting: 'Hello!',
   intro:
-    "I'm David and I am studying Informatics with a focus in Software Engineering at the University of Washington. Passionate about solving interesting problems and building connections wherever I go.",
+    "I am studying Informatics with a focus in Software Engineering at the University of Washington. Passionate about solving interesting problems and building connections wherever I go.",
   research:
     'While at school, I have been able to do both research for the Code and Cognition Lab where I worked on Wordplay and the HCDE Department where I research content moderation using LLMs. Along with that, I have been a teaching assistant for many core software development courses in the iSchool that involve skills with frontend and backend web development. I have also had the privilege to do internships with HP Inc. and FoodCLUB.',
   leadership:

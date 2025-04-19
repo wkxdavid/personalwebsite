@@ -107,10 +107,25 @@
 }
 
 .tech-stack {
-  font-size: 1em;
-  font-weight: bold;
-  color: var(--accent);
+  margin-top: 10px;
 }
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.tech-tag {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
 
 .details-section {
   margin-top: 20px;

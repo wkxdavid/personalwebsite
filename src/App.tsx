@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect, RefObject } from 'react';
 import './App.css';
 import Footer from './components/footer';
-// import Navbar from './components/navbar';
+import Navbar from './components/navbar';
 import AboutPage from './pages/AboutPage/about';
 import ExperiencePage from './pages/ExperiencePage/experience';
 import HomePage from './pages/HomePage/home';
@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* {showNavbar && (
+      {showNavbar && (
         <header className="App-header">
           <div
             className={`navbar-container ${
@@ -72,7 +72,7 @@ function App() {
             />
           </div>
         </header>
-      )} */}
+      )}
 
       <section id="home" ref={homeRef}>
         <HomePage

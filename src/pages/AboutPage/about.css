@@ -40,14 +40,12 @@ body {
   font-weight: bold;
   color: var(--text-primary);
   margin-bottom: 10px;
-  animation: fadeSlideDown 0.6s ease-in-out;
 }
 
 .about-text h2 {
   font-size: 2em;
   color: var(--text-secondary);
   margin-bottom: 30px;
-  animation: fadeSlideDown 0.8s ease-in-out;
 }
 
 .about-text p {
@@ -55,14 +53,12 @@ body {
   line-height: 1.6;
   color: var(--text-secondary);
   margin-bottom: 15px;
-  animation: fadeSlideUp 1s ease-in-out;
 }
 
 .about-detail-section {
   margin-top: 20px;
   padding-left: 10px;
   border-left: 3px solid var(--border-color);
-  animation: fadeSlideUp 1.2s ease-in-out;
 }
 
 .about-detail-section h3 {
@@ -77,7 +73,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  animation: fadeSlideIn 1.2s ease-in-out;
 }
 
 .about-image::before {
@@ -103,57 +98,34 @@ body {
   transform: scale(1.03);
 }
 
-.about-stats {
+.about-skills {
   margin-top: 40px;
+}
+
+.about-skills h3 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  color: var(--text-primary);
-  animation: fadeSlideUp 1.4s ease-in-out;
+  gap: 12px;
 }
 
-.about-stats div {
-  font-size: 1.2em;
-  text-align: center;
+.skill-tags span {
+  padding: 8px 14px;
+  background-color: var(--accent);
+  color: #fff;
+  font-size: 0.95em;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: transform 0.2s ease;
 }
 
-.about-stats strong {
-  font-size: 1.8em;
-  color: var(--accent);
-  display: block;
-}
-
-@keyframes fadeSlideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.skill-tags span:hover {
+  transform: scale(1.05);
 }
 
 @media only screen and (max-width: 768px) {
@@ -187,9 +159,5 @@ body {
   .about-image img {
     max-width: 90%;
     border-radius: 10px;
-  }
-
-  .about-stats {
-    justify-content: center;
   }
 }

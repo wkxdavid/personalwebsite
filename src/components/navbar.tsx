@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from '../img/dp-logo-transparent-black.jpg';
+import logo from '../img/dp-new-transparent.png';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import '../styles/navbar.css'
 
 interface NavbarProps {
   scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
@@ -17,48 +18,36 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs }) => {
   };
 
   return (
-    <nav className="navbar">
-      <img
-        src={logo}
-        className="App-logo"
-        alt="logo"
-        onClick={() => handleClick('home')}
-      />
+    <nav className="custom-navbar">
+      <div className="navbar-inner">
+        <div className="navbar-left" onClick={() => handleClick('home')}>
+          <img src={logo} alt="DP logo" className="navbar-logo" />
+          <span className="navbar-name">David Pham</span>
+        </div>
 
-      <ul className="nav-links">
-        <li>
-          <button onClick={() => handleClick('home')}>Home</button>
-        </li>
-        <li>
-          <button onClick={() => handleClick('about')}>About</button>
-        </li>
-        <li>
-          <button onClick={() => handleClick('experience')}>Work</button>
-        </li>
-      </ul>
+        <ul className="navbar-links">
+          <li>
+            <button onClick={() => handleClick('home')}>Home</button>
+          </li>
+          <li>
+            <button onClick={() => handleClick('about')}>About</button>
+          </li>
+          <li>
+            <button onClick={() => handleClick('experience')}>Work</button>
+          </li>
+        </ul>
 
-      <div className="social-icons">
-        <a
-          href="mailto:phamdavid722@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaEnvelope size={30} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/phamdavid722"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin size={30} />
-        </a>
-        <a
-          href="https://github.com/wkxdavid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub size={30} />
-        </a>
+        <div className="navbar-icons">
+          <a href="mailto:phamdavid722@gmail.com" target="_blank" rel="noopener noreferrer">
+            <FaEnvelope />
+          </a>
+          <a href="https://www.linkedin.com/in/phamdavid722" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://github.com/wkxdavid" target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+        </div>
       </div>
     </nav>
   );

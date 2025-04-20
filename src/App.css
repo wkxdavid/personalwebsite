@@ -1,83 +1,3 @@
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 0 !important;
-  z-index: 1000;
-  background-color: var(--secondary-bg);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 12vw;
-}
-
-.App-logo {
-  cursor: pointer;
-  padding-left: 12vw;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  flex-grow: 1;
-}
-
-.nav-links li {
-  margin: 0 15px;
-}
-
-.social-icons {
-  display: flex;
-  gap: 15px;
-}
-
-.navbar button {
-  background: none;
-  border: none;
-  color: var(--text-primary) !important;
-  text-decoration: none;
-  font-size: 1.2em;
-  padding: 10px 20px;
-  cursor: pointer;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.navbar button::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background-color: var(--accent);
-  transition: width 0.4s ease;
-}
-
-.navbar button:hover::before {
-  width: 100%;
-}
-
-.social-icons {
-  padding-right: 12vw;
-}
-
-.social-icons a {
-  color: var(--text-primary);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: var(--accent);
-}
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -101,7 +21,6 @@ html {
   width: 100%;
   z-index: 1000;
   transition: opacity 0.4s ease;
-  pointer-events: none;
 }
 
 .App-header.show {
@@ -113,6 +32,25 @@ html {
   opacity: 0;
   pointer-events: none;
 }
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
 
 .App-footer {
   background-color: var(--border-color);

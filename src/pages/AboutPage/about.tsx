@@ -22,21 +22,34 @@ function AboutPage() {
             <p>{aboutContent.leadership}</p>
           </div>
 
-          <div className="about-skills">
-            <h3>Top Skills</h3>
-            <div className="skill-tags">
-              <span>TypeScript</span>
-              <span>React</span>
-              <span>Node.js</span>
-              <span>MongoDB</span>
-              <span>Express.js</span>
-              <span>Java</span>
-              <span>AWS</span>
-              <span>Jest</span>
-              <span>Docker</span>
-              <span>Supabase</span>
+          <div className="about-skills about-detail-section">
+            <h3>Skills</h3>
+
+            <div className="skill-group">
+              <h4>Languages</h4>
+              <div className="skill-tags">
+                <span>TypeScript</span>
+                <span>JavaScript</span>
+                <span>Java</span>
+                <span>Python</span>
+                <span>C++</span>
+                <span>SQL</span>
+              </div>
+            </div>
+
+            <div className="skill-group">
+              <h4>Tools & Technologies</h4>
+              <div className="skill-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>MongoDB</span>
+                <span>AWS</span>
+                <span>Supabase</span>
+              </div>
             </div>
           </div>
+
         </div>
 
         <div className="about-image">

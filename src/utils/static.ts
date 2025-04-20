@@ -169,23 +169,23 @@ export const projects = [
       'Analyzed UC Berkeley gym activity trends using R and visualized patterns with ggplot2 and Plotly. Deployed via Shiny.',
     image: gymData,
     alt: 'Gym Data Analysis',
-  },
-  {
-    title: 'Workout Database Searcher',
-    tech: 'SQL, SQL Server Management Studio',
-    description:
-      'Designed an SQL database to recommend workouts based on muscle groups, created ER diagrams, and optimized queries for analysis.',
-    image: GymSchema,
-    alt: 'Gym Data Schema',
-  },
-  {
-    title: 'Weather Analysis',
-    tech: 'JavaScript, D3.js',
-    description:
-      'Built an interactive D3.js visualization to compare precipitation and temperature trends across various cities throughout the year.',
-    image: d3Viz,
-    alt: 'Weather Data Visualization',
-  },
+  }
+  // {
+  //   title: 'Workout Database Searcher',
+  //   tech: 'SQL, SQL Server Management Studio',
+  //   description:
+  //     'Designed an SQL database to recommend workouts based on muscle groups, created ER diagrams, and optimized queries for analysis.',
+  //   image: GymSchema,
+  //   alt: 'Gym Data Schema',
+  // },
+  // {
+  //   title: 'Weather Analysis',
+  //   tech: 'JavaScript, D3.js',
+  //   description:
+  //     'Built an interactive D3.js visualization to compare precipitation and temperature trends across various cities throughout the year.',
+  //   image: d3Viz,
+  //   alt: 'Weather Data Visualization',
+  // },
 ];
 
 export const aboutContent = {

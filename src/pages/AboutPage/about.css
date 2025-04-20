@@ -108,6 +108,16 @@ body {
   color: var(--text-primary);
 }
 
+.skill-group {
+  margin-top: 20px;
+}
+
+.skill-group h4 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
@@ -122,6 +132,10 @@ body {
   border-radius: 20px;
   font-weight: 500;
   transition: transform 0.2s ease;
+}
+
+.skill-tags span:hover {
+  transform: scale(1.05);
 }
 
 .skill-tags span:hover {

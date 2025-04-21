@@ -25,7 +25,6 @@
   color: var(--text-secondary);
 }
 
-/* Timeline-inspired Card Container */
 .work-container {
   display: flex;
   flex-direction: column;

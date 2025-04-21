@@ -37,7 +37,7 @@ export const workExperience = [
     date: 'May 2024 - August 2024',
     tech: 'React, TypeScript, Java, Selenium, AWS, Jest, Enzyme',
     details: [
-      'Worked on the Control Portal team within the HP Workforce Experience Platform, developing React components, automating tests with Selenium, and enhancing backend functionality in Java.',
+      'Developed React components for the HP Workforce Experience Platform and enhanced backend APIs using Java to streamline enterprise workflows.',
     ],
   },
   {
@@ -48,7 +48,7 @@ export const workExperience = [
     date: 'January 2024 - May 2024',
     tech: 'JavaScript, Express.js, Node.js, Amazon DynamoDB',
     details: [
-      'Developed and maintained backend API endpoints using Express.js and integrated Amazon DynamoDB for efficient data storage.',
+      'Built and maintained scalable RESTful API endpoints using Express.js and integrated Amazon DynamoDB for optimized data access and low-latency performance.',
     ],
   },
   {
@@ -59,7 +59,7 @@ export const workExperience = [
     date: 'September 2023 - December 2023',
     tech: 'Python, Pandas, OpenAI GPT 4.0, Google Perspective',
     details: [
-      'Researched how LLMs and Generative AI improve content moderation in social media and gaming chatrooms using OpenAI GPT-4 and Google Perspective API.',
+      'Conducted research on improving content moderation through LLMs by analyzing toxicity in gaming chatrooms using OpenAI GPT-4 and Google Perspective API.',
     ],
   },
   {
@@ -70,10 +70,11 @@ export const workExperience = [
     date: 'June 2023 - September 2023',
     tech: 'TypeScript, Svelte, Firebase',
     details: [
-      'Developed interactive front-end components for WordPlay, an educational coding language, using TypeScript, Svelte, and Firebase.',
+      'Designed and implemented interactive front-end modules for WordPlay, an educational coding tool, using Svelte, TypeScript, and Firebase to enhance user learning experiences.',
     ],
   },
 ];
+
 
 export const extracurricular = [
   {
@@ -84,7 +85,7 @@ export const extracurricular = [
     date: 'September 2023 - Present',
     tech: 'React, JavaScript, Express.js, Node.js, MongoDB, Azure, R, Tidyverse, Shiny, testthat',
     details: [
-      'Taught server-side and client-side development as well as data science concepts across multiple courses, including INFO 441, INFO 201, and INFO 340.',
+      'Supported and led instruction for INFO 201, INFO 340, and INFO 441, covering topics in full-stack web development and data science, while mentoring students on projects and coding best practices.',
     ],
   },
   {
@@ -94,7 +95,7 @@ export const extracurricular = [
     location: 'Seoul, South Korea',
     date: 'September 2024',
     details: [
-      'Did an one month study abroad with SKKU students where we worked towards learning about Information, Technology, and Culture in Modern South Korea.',
+      'Participated in a month-long academic exchange focused on the intersection of technology, culture, and society in South Korea, collaborating with local SKKU students.',
     ],
   },
   {
@@ -104,17 +105,17 @@ export const extracurricular = [
     location: 'University of Washington',
     date: 'September 2021 - Present',
     details: [
-      'Led tournaments and community events around Valorant for 100+ people.',
+      'Organized tournaments and community events for 100+ members, fostering competitive play and inclusive culture in the university’s largest gaming club.',
     ],
   },
   {
     icon: faBriefcase,
     title: 'Mentorship Program Manager',
-    company: 'Software Enginnering Career Club (SWECC)',
+    company: 'Software Engineering Career Club (SWECC)',
     location: 'University of Washington',
     date: 'June 2022 - Present',
     details: [
-      'Led the foundation for the Student Mentorship Program (SMP) to help connect students pursing SWE around campus.',
+      'Scaled the Student Mentorship Program (SMP), matching aspiring SWE students with mentors and increasing club engagement and retention.',
     ],
   },
   {
@@ -124,10 +125,11 @@ export const extracurricular = [
     location: 'Washington',
     date: 'June 2022 - Present',
     details: [
-      'Volunteered as grader and proctor for the Mathcounts competition.',
+      'Served as a grader and proctor for annual MathCounts competitions, supporting local STEM education and middle school math.',
     ],
   },
 ];
+
 
 export const projects = [
   {

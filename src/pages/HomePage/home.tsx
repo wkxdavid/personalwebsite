@@ -25,46 +25,52 @@ const HomePage: React.FC<HomePageProps> = ({ scrollToSection, refs }) => {
   };
 
   return (
-    <section id="home-section" className="home-section">
+    <section id='home-section' className='home-section'>
       <ParticleBackground />
 
-      <div className="home-container">
-        <div className="home-text">
-          <h1>David Pham</h1>
+      <div className='home-container'>
+        <div className='home-text'>
+          <h1>David D. Pham</h1>
           <h2>Software Engineer</h2>
-          <div className="contact-info">
-            <div className="link-item">
-              <a href="mailto:phamdavid722@gmail.com">
+          <div className='contact-info'>
+            <div className='link-item'>
+              <a href='mailto:phamdavid722@gmail.com'>
                 <FaEnvelope size={30} />
                 <p>phamdavid722@gmail.com</p>
               </a>
             </div>
-            <div className="link-item">
+            <div className='link-item'>
               <a
-                href="https://www.linkedin.com/in/phamdavid722"
-                target="_blank"
-                rel="noopener noreferrer"
+                href='https://www.linkedin.com/in/phamdavid722'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <FaLinkedin size={30} />
                 <p>phamdavid722</p>
               </a>
             </div>
-            <div className="link-item">
+            <div className='link-item'>
               <a
-                href="https://github.com/wkxdavid"
-                target="_blank"
-                rel="noopener noreferrer"
+                href='https://github.com/wkxdavid'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <FaGithub size={30} />
                 <p>wkxdavid</p>
               </a>
             </div>
           </div>
-          <div className="home-buttons">
-            <button onClick={() => handleScrollTo('aboutRef')} className="home-button">
+          <div className='home-buttons'>
+            <button
+              onClick={() => handleScrollTo('aboutRef')}
+              className='home-button'
+            >
               About
             </button>
-            <button onClick={() => handleScrollTo('experienceRef')} className="home-button">
+            <button
+              onClick={() => handleScrollTo('experienceRef')}
+              className='home-button'
+            >
               Work
             </button>
           </div>

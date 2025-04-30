@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage/about';
 import ExperiencePage from './pages/ExperiencePage/experience';
 import HomePage from './pages/HomePage/home';
 import { Analytics } from '@vercel/analytics/react';
+import NavDots from './components/navDots';
 
 function App() {
   const homeRef = useRef<HTMLElement | null>(null);
@@ -17,7 +18,7 @@ function App() {
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
       root: null,
-      threshold: 0.5,
+      threshold: 0.3,
     };
 
     const observerCallback: IntersectionObserverCallback = (entries) => {
@@ -54,6 +55,7 @@ function App() {
   };
 
   return (
+    
     <div className="App">
       {showNavbar && (
         <header className="App-header">
@@ -88,6 +90,16 @@ function App() {
       </section>
       <Footer />
       <Analytics />
+      {showNavbar && (
+        <NavDots
+          visibleSection={visibleSection}
+          scrollToSection={(sectionId) => {
+            if (sectionId === 'home') scrollToSection(homeRef);
+            else if (sectionId === 'about') scrollToSection(aboutRef);
+            else if (sectionId === 'experience') scrollToSection(experienceRef);
+          }}
+        />
+      )}
     </div>
   );
 }

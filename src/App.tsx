@@ -3,7 +3,9 @@ import './App.css';
 import Footer from './components/footer';
 import Navbar from './components/navbar';
 import AboutPage from './pages/AboutPage/about';
-import ExperiencePage from './pages/ExperiencePage/experience';
+import WorkExperiencePage from './pages/ExperiencePage/workExperience';
+import ExtracurricularPage from './pages/ExperiencePage/extracurricularPage';
+import ProjectsPage from './pages/ExperiencePage/projectsPage';
 import HomePage from './pages/HomePage/home';
 import { Analytics } from '@vercel/analytics/react';
 import ScrollTimeline from './components/scrollTimeline';
@@ -53,7 +55,9 @@ function App() {
   const sections = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
+    { id: 'work', label: 'Work' },
+    { id: 'extracurricular', label: 'Extracurricular' },
+    { id: 'projects', label: 'Projects' },
   ];
   
   
@@ -99,7 +103,9 @@ function App() {
         <AboutPage />
       </section>
       <section id="experience" ref={experienceRef}>
-        <ExperiencePage />
+        <div id="work"><WorkExperiencePage /></div>
+        <div id="extracurricular"><ExtracurricularPage /></div>
+        <div id="projects"><ProjectsPage /></div>
       </section>
       <Footer />
       <Analytics />

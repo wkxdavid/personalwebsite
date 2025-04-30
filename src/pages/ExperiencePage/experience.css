@@ -146,10 +146,19 @@
 }
 
 /* Projects */
-#projects-section {
+.projects-section {
   padding: 60px 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.projects-section h1,
+.projects-section h3 {
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
 
 #projects-section h1,
 .projects-section h1 {

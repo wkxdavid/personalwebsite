@@ -6,7 +6,7 @@ import AboutPage from './pages/AboutPage/about';
 import ExperiencePage from './pages/ExperiencePage/experience';
 import HomePage from './pages/HomePage/home';
 import { Analytics } from '@vercel/analytics/react';
-import NavDots from './components/navDots';
+import ScrollTimeline from './components/scrollTimeline';
 
 function App() {
   const homeRef = useRef<HTMLElement | null>(null);
@@ -50,9 +50,22 @@ function App() {
     setShowNavbar(visibleSection === 'about' || visibleSection === 'experience');
   }, [visibleSection]);
 
-  const scrollToSection = (ref: RefObject<HTMLElement>) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  const sections = [
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Experience' },
+  ];
+  
+  
+  const scrollToSection = (sectionId: string | RefObject<HTMLElement>) => {
+    if (typeof sectionId === 'string') {
+      const el = document.getElementById(sectionId);
+      el?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      sectionId.current?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
+  
 
   return (
     
@@ -91,14 +104,11 @@ function App() {
       <Footer />
       <Analytics />
       {showNavbar && (
-        <NavDots
-          visibleSection={visibleSection}
-          scrollToSection={(sectionId) => {
-            if (sectionId === 'home') scrollToSection(homeRef);
-            else if (sectionId === 'about') scrollToSection(aboutRef);
-            else if (sectionId === 'experience') scrollToSection(experienceRef);
-          }}
-        />
+      <ScrollTimeline
+        sections={sections}
+        visibleSection={visibleSection}
+        scrollToSection={scrollToSection}
+      />
       )}
     </div>
   );

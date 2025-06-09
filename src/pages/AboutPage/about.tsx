@@ -7,6 +7,9 @@ function AboutPage() {
   return (
     <section id='about-section' className='about-section'>
       <div className='about-container'>
+        <div className='about-image'>
+          <img src={personalImage} alt='David Pham smiling in a suit' />
+        </div>
         <div className='about-text'>
           <h1>{aboutContent.greeting}</h1>
           <h2>I'm David Pham</h2>
@@ -51,9 +54,6 @@ function AboutPage() {
           </div> */}
         </div>
 
-        <div className='about-image'>
-          <img src={personalImage} alt='David Pham smiling in a suit' />
-        </div>
       </div>
     </section>
   );

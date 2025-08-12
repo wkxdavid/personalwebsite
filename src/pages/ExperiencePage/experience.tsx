@@ -162,7 +162,7 @@ const ExperiencePage: React.FC = () => {
         </div>
       </section>
 
-      <section id="projects-section" className="projects-section">
+      {/* <section id="projects-section" className="projects-section">
         <h1>Projects</h1>
         <h3>Turning Ideas into Code</h3>
         <div className="project-slider-container">
@@ -188,7 +188,7 @@ const ExperiencePage: React.FC = () => {
             ))}
           </Slider>
         </div>
-      </section>
+      </section> */}
 
       {isPopupVisible && popupContent && (
         <div className="popup-overlay active" onClick={handleOverlayClick}>

@@ -193,9 +193,10 @@ export const projects = [
 export const aboutContent = {
   greeting: 'Hello!',
   intro:
-    "I am studying Informatics with a focus in Software Engineering at the University of Washington. Passionate about solving interesting problems and building connections wherever I go.",
+    "I recently graduated from the University of Washington with a Bachelor of Science in Informatics, focusing on Software Engineering. I’m passionate about solving interesting problems and building connections wherever I go, and I’ll soon be starting my career as a Software Engineer at HP Inc.",
   research:
-    'While at school, I have been able to do both research for the Code and Cognition Lab where I worked on Wordplay and the HCDE Department where I research content moderation using LLMs. Along with that, I have been a teaching assistant for many core software development courses in the iSchool that involve skills with frontend and backend web development. I have also had the privilege to do internships with HP Inc. and FoodCLUB.',
+    'During my time at UW, I worked with the Code and Cognition Lab on Wordplay and with the HCDE Department researching content moderation using LLMs. I also served as a teaching assistant for many core software development courses in the iSchool, gaining extensive experience in both frontend and backend web development. My professional experience includes internships with HP Inc. and FoodCLUB.',
   leadership:
-    'Outside of academics, I have spent a lot of time taking leadership positions in different clubs. I serve as the President for Valorant @ UW and Mentorship Program Manager for the Software Engineering Career Club. As graduation approaches, I’m looking forward to what’s next.',
+    'Outside of academics, I’ve taken on leadership roles in various clubs, serving as President for Valorant @ UW and Mentorship Program Manager for the Software Engineering Career Club. With graduation behind me, I’m excited to begin this next chapter at HP and continue growing as a developer and leader.',
 };
+

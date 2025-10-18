@@ -29,6 +29,28 @@ export interface ProjectItem {
 }
 
 export const workExperience = [
+      {
+    icon: faBriefcase,
+    title: 'Software Engineer',
+    company: 'HP Inc.',
+    location: 'Seattle, WA',
+    date: 'September 2025 - Present',
+    tech: 'Golang, AWS',
+    details: [
+      'Working on the Solution Services team.',
+    ],
+  },
+    {
+    icon: faBriefcase,
+    title: 'Teaching Assistant',
+    company: 'UW Information School',
+    location: 'Seattle, WA',
+    date: 'September 2023 - June 2025',
+    tech: 'React, JavaScript, Express.js, Node.js, MongoDB, Azure, R, Tidyverse, Shiny, testthat',
+    details: [
+      'Supported and led instruction for INFO 201, INFO 340, and INFO 441, covering topics in full-stack web development and data science, while mentoring students on projects and coding best practices.',
+    ],
+  },
   {
     icon: faBriefcase,
     title: 'Software Engineering Intern',
@@ -193,7 +215,7 @@ export const projects = [
 export const aboutContent = {
   greeting: 'Hello!',
   intro:
-    "I recently graduated from the University of Washington with a Bachelor of Science in Informatics, focusing on Software Engineering. I’m passionate about solving interesting problems and building connections wherever I go, and I’ll soon be starting my career as a Software Engineer at HP Inc.",
+    "I recently graduated from the University of Washington with a Bachelor of Science in Informatics, focusing on Software Engineering. I’m passionate about solving interesting problems and building meaningful connections, and I’m currently working as a Software Engineer at HP Inc., where I’m contributing to innovative software solutions",
   research:
     'During my time at UW, I worked with the Code and Cognition Lab on Wordplay and with the HCDE Department researching content moderation using LLMs. I also served as a teaching assistant for many core software development courses in the iSchool, gaining extensive experience in both frontend and backend web development. My professional experience includes internships with HP Inc. and FoodCLUB.',
   leadership:

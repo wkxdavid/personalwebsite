@@ -123,7 +123,7 @@ const ExperiencePage: React.FC = () => {
         </div>
       </section>
 
-      <section id="extracurricular-section" className="experience-section">
+      {/* <section id="extracurricular-section" className="experience-section">
         <h1>Extracurricular Activities</h1>
         <h3>Leadership & Involvement</h3>
         <div className="work-container">
@@ -160,7 +160,7 @@ const ExperiencePage: React.FC = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* <section id="projects-section" className="projects-section">
         <h1>Projects</h1>

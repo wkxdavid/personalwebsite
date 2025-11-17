@@ -4,6 +4,15 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
+// Set initial theme class before React mounts to avoid flash
+try {
+  const stored = localStorage.getItem('theme');
+  const theme = stored === 'light' || stored === 'dark' ? stored : 'dark';
+  document.documentElement.classList.toggle('dark', theme === 'dark');
+} catch (e) {
+  // ignore
+}
+
 const rootElement = document.getElementById('root');
 
 if (rootElement) {

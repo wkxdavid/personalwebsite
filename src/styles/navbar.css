@@ -65,11 +65,41 @@
     justify-content: flex-end;
     gap: 20px;
   }
+
+  .theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    /* match the icon size and weight used for social icons */
+    font-size: 1.3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    align-self: center;
+    line-height: 0;
+  }
+
+  .theme-toggle:hover {
+    background-color: rgba(0,0,0,0.06);
+  }
   
   .navbar-icons a {
     color: var(--text-primary);
     font-size: 1.3rem;
     transition: color 0.2s ease;
+    /* ensure social icon anchors are same box as theme toggle */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    line-height: 0;
   }
   
   .navbar-icons a:hover {

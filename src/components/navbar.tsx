@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../img/dp-new-transparent.png';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaMoon, FaSun } from 'react-icons/fa';
 import '../styles/navbar.css'
 
 interface NavbarProps {
@@ -13,6 +13,29 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs }) => {
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    try {
+      const stored = localStorage.getItem('theme');
+        if (stored === 'light' || stored === 'dark') return stored;
+        // default to dark mode when no stored preference
+        return 'dark';
+    } catch (e) {
+      //  fallback to light mode
+    }
+    return 'light';
+  });
+
+  useEffect(() => {
+    try {
+      document.documentElement.classList.toggle('dark', theme === 'dark');
+      localStorage.setItem('theme', theme);
+    } catch (e) {
+      // ignore
+    }
+  }, [theme]);
+
+  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
+
   const handleClick = (section: keyof typeof refs) => {
     scrollToSection(refs[section]);
   };
@@ -38,6 +61,9 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs }) => {
         </ul>
 
         <div className="navbar-icons">
+          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+            {theme === 'dark' ? <FaSun /> : <FaMoon />}
+          </button>
           <a href="mailto:phamdavid722@gmail.com" target="_blank" rel="noopener noreferrer">
             <FaEnvelope />
           </a>

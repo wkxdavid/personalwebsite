@@ -19,7 +19,10 @@ code {
   --text-primary: #111827;
   --text-secondary: #6b7280;
   --border-color: #d1d5db;
-  --home-bg: #0f172a;
+  /* Home/hero background for light mode: keep it light and readable */
+  --home-bg: #ffffff;
+  /* Text color to use on top of the home background */
+  --home-text: var(--text-primary);
 }
 
 
@@ -29,4 +32,15 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+html.dark {
+  --primary-bg: #071021;
+  --secondary-bg: #0b1a2b;
+  --accent: #60a5fa;
+  --text-primary: #e6eef8;
+  --text-secondary: #9fb0c6;
+  --border-color: rgba(255,255,255,0.08);
+  --home-bg: #071022;
+  --home-text: var(--text-primary);
 }

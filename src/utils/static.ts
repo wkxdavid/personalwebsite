@@ -35,9 +35,9 @@ export const workExperience = [
     company: 'HP Inc.',
     location: 'Seattle, WA',
     date: 'September 2025 - Present',
-    tech: 'Golang, AWS',
+    tech: 'Golang, AWS, React, Typescript, Docker, RabbitMQ',
     details: [
-      'Working on the Solution Services team.',
+      'Working on the Enterprise Solutions team.',
     ],
   },
     {
@@ -215,10 +215,14 @@ export const projects = [
 export const aboutContent = {
   greeting: 'Hello!',
   intro:
-    "I recently graduated from the University of Washington with a Bachelor of Science in Informatics, focusing on Software Engineering. I’m passionate about solving interesting problems and building meaningful connections, and I’m currently working as a Software Engineer at HP Inc., where I’m contributing to innovative software solutions",
-  research:
-    'During my time at UW, I worked with the Code and Cognition Lab on Wordplay and with the HCDE Department researching content moderation using LLMs. I also served as a teaching assistant for many core software development courses in the iSchool, gaining extensive experience in both frontend and backend web development. My professional experience includes internships with HP Inc. and FoodCLUB.',
-  leadership:
-    'Outside of academics, I’ve taken on leadership roles in various clubs, serving as President for Valorant @ UW and Mentorship Program Manager for the Software Engineering Career Club. With graduation behind me, I’m excited to begin this next chapter at HP and continue growing as a developer and leader.',
+    "I recently graduated from the University of Washington with a Bachelor of Science in Informatics, focusing on Software Engineering. Currently working as a SWE @ HP working on enterprise solutions. ",
+  activeSkills: [
+    'Golang',
+    'AWS',
+    'TypeScript',
+    'React',
+    'Docker',
+    'CI/CD',
+  ],
 };
 

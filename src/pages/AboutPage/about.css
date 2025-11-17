@@ -126,7 +126,7 @@ body {
 
 .skill-tags span {
   padding: 8px 14px;
-  background-color: var(--accent);
+  background-color: var(--border-color);
   color: #fff;
   font-size: 0.95em;
   border-radius: 20px;
@@ -173,5 +173,9 @@ body {
   .about-image img {
     max-width: 90%;
     border-radius: 10px;
+  }
+
+  .about-image-canvas {
+    height: 260px;
   }
 }

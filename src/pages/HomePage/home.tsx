@@ -30,7 +30,7 @@ const HomePage: React.FC<HomePageProps> = ({ scrollToSection, refs }) => {
 
       <div className='home-container'>
         <div className='home-text'>
-          <h1>David D. Pham</h1>
+          <h1>David Pham</h1>
           <h2>Software Engineer</h2>
           <div className='contact-info'>
             <div className='link-item'>

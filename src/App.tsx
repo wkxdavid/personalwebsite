@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect, RefObject } from 'react';
 import './App.css';
 import Footer from './components/footer';
 import Navbar from './components/navbar';
+import ParticleBackground from './components/particleBackground';
 import AboutPage from './pages/AboutPage/about';
 import ExperiencePage from './pages/ExperiencePage/experience';
 import HomePage from './pages/HomePage/home';
@@ -55,6 +56,7 @@ function App() {
 
   return (
     <div className="App">
+      <ParticleBackground />
       {showNavbar && (
         <header className="App-header">
           <div

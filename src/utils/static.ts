@@ -70,7 +70,7 @@ export const workExperience = [
     date: 'January 2024 - May 2024',
     tech: 'JavaScript, Express.js, Node.js, Amazon DynamoDB',
     details: [
-      'Built and maintained scalable RESTful API endpoints using Express.js and integrated Amazon DynamoDB for optimized data access and low-latency performance.',
+      'Built and maintained scalable RESTful API endpoints using Express.js and integrated Amazon DynamoDB for data access.',
     ],
   },
   {
@@ -215,7 +215,9 @@ export const projects = [
 export const aboutContent = {
   greeting: 'Hello!',
   intro:
-    "I recently graduated from the University of Washington with a Bachelor of Science in Informatics, focusing on Software Engineering. Currently working as a SWE @ HP working on enterprise solutions. ",
+        "I studied Informatics at the University of Washington primarily focusing on Software Engineering. Currently working as a full-stack SWE @ HP working on enterprise solutions.",
+
+  "I recently graduated from the University of Washington with a Bachelor of Science in Informatics, focusing on Software Engineering. Currently working as a SWE @ HP working on enterprise solutions. ",
   activeSkills: [
     'Golang',
     'AWS',

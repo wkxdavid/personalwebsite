@@ -13,15 +13,15 @@ const ParticleBackground: React.FC = () => {
       id="tsparticles"
       init={particlesInit}
       options={{
-        fullScreen: { enable: false },
+        fullScreen: { enable: true, zIndex: 0 },
         background: {
           color: { value: 'transparent' },
         },
         particles: {
-          color: { value: '#64ffda' },
+          color: { value: '#60a5fa' },
           links: {
             enable: true,
-            color: '#64ffda',
+            color: '#60a5fa',
             distance: 150,
             opacity: 0.3,
             width: 1,

@@ -34,6 +34,22 @@ body {
   padding: 0;
 }
 
+/* Ensure App content sits above the particle canvas */
+.App {
+  position: relative;
+  z-index: 1;
+}
+
+/* Keep the particle canvas behind content and non-interactive */
+#tsparticles {
+  position: fixed;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+  pointer-events: none;
+}
+
 html.dark {
   --primary-bg: #071021;
   --secondary-bg: #0b1a2b;

@@ -216,8 +216,6 @@ export const aboutContent = {
   greeting: 'Hello!',
   intro:
         "I studied Informatics at the University of Washington primarily focusing on Software Engineering. Currently working as a full-stack SWE @ HP working on enterprise solutions.",
-
-  "I recently graduated from the University of Washington with a Bachelor of Science in Informatics, focusing on Software Engineering. Currently working as a SWE @ HP working on enterprise solutions. ",
   activeSkills: [
     'Golang',
     'AWS',

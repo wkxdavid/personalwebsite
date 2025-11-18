@@ -17,8 +17,9 @@ code {
   --secondary-bg: #f4f4f4;   
   --accent: #3b82f6;   
   --text-primary: #111827;
-  --text-secondary: #6b7280;
-  --border-color: #d1d5db;
+  /* Darken secondary text and borders for better contrast on light backgrounds */
+  --text-secondary: #374151; /* darker gray for readable secondary text */
+  --border-color: #c7cbd1;
   /* Home/hero background for light mode: keep it light and readable */
   --home-bg: #ffffff;
   /* Text color to use on top of the home background */

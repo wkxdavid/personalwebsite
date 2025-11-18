@@ -44,14 +44,15 @@ body {
 
 .about-text h2 {
   font-size: 2em;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   margin-bottom: 30px;
 }
 
 .about-text p {
   font-size: 1.15em;
   line-height: 1.6;
-  color: var(--text-secondary);
+  /* use primary text for better contrast on light backgrounds */
+  color: var(--text-primary);
   margin-bottom: 15px;
 }
 
@@ -126,8 +127,9 @@ body {
 
 .skill-tags span {
   padding: 8px 14px;
-  background-color: var(--border-color);
-  color: #fff;
+  /* use accent as tag background for clear contrast in light mode */
+  background-color: var(--accent);
+  color: #ffffff;
   font-size: 0.95em;
   border-radius: 20px;
   font-weight: 500;

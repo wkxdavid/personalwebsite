@@ -7,7 +7,7 @@ body {
   font-family: Arial, sans-serif;
   color: var(--text-primary);
   overflow: auto;
-}
+
 
 .about-section {
   display: flex;
@@ -95,35 +95,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-image img:hover {
-  transform: scale(1.03);
-}
-
-.about-skills {
-  margin-top: 40px;
-}
-
-.about-skills h3 {
-  font-size: 1.3em;
-  margin-bottom: 15px;
-  color: var(--text-primary);
-}
-
-.skill-group {
-  margin-top: 20px;
-}
-
-.skill-group h4 {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  color: var(--text-primary);
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
+/* Removed unused particle-canvas wrapper and overlay styles (we render the personal image now) */
 
 .skill-tags span {
   padding: 8px 14px;
@@ -134,10 +106,6 @@ body {
   border-radius: 20px;
   font-weight: 500;
   transition: transform 0.2s ease;
-}
-
-.skill-tags span:hover {
-  transform: scale(1.05);
 }
 
 .skill-tags span:hover {
@@ -176,8 +144,5 @@ body {
     max-width: 90%;
     border-radius: 10px;
   }
-
-  .about-image-canvas {
-    height: 260px;
-  }
+}
 }

@@ -87,17 +87,3 @@ html {
   color: var(--accent);
 }
 
-.loading-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: var(--primary-bg);
-}
-
-.loading-container p {
-  font-size: 1.2em;
-  color: var(--text-primary);
-  margin-top: 15px;
-}

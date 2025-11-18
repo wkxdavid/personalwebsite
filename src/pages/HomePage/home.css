@@ -22,21 +22,9 @@ body {
 }
 
 .home-section::before {
-  /* make the hero overlay fixed so it doesn't shift during section/navbar transitions
-     this prevents visible seams where backgrounds meet */
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  background: var(--home-bg);
-  opacity: 0.6;
-  z-index: 1;
-  pointer-events: none;
+  display: none;
 }
 
-/* #tsparticles moved to global styles in index.css for full-screen particles */
 
 .home-container {
   z-index: 2;

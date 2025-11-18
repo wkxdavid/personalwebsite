@@ -1,7 +1,7 @@
 .experience-page {
   padding: 40px 20px;
   font-family: 'Arial', sans-serif;
-  color: var(--text-primary);
+  color: var(--home-text);
   background-color: var(--primary-bg);
   scroll-behavior: smooth;
 }
@@ -15,7 +15,7 @@
   font-size: 3em;
   font-weight: 700;
   margin-bottom: 8px;
-  color: var(--text-primary);
+  color: var(--home-text);
 }
 
 .experience-section h3 {
@@ -81,7 +81,7 @@
   font-size: 1.4em;
   font-weight: 600;
   margin: 0;
-  color: var(--text-primary);
+  color: var(--home-text);
 }
 
 .work-title h4 {
@@ -120,7 +120,7 @@
 .tech-stack strong {
   display: block;
   margin-bottom: 5px;
-  color: var(--text-primary);
+  color: var(--home-text);
 }
 
 .tech-tags {
@@ -155,7 +155,7 @@
 .projects-section h1 {
   font-size: 2.8em;
   margin-bottom: 10px;
-  color: var(--text-primary);
+  color: var(--home-text);
 }
 
 #projects-section h3,
@@ -242,7 +242,7 @@
 .popup-container h2 {
   font-size: 2em;
   margin-bottom: 10px;
-  color: var(--text-primary);
+  color: var(--home-text);
 }
 
 .popup-container p {

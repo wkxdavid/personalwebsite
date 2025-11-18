@@ -76,16 +76,16 @@ function App() {
         </header>
       )}
 
-      <section id="home" ref={homeRef}>
+      <section id="home" ref={homeRef} className={visibleSection === 'home' ? 'active' : ''}>
         <HomePage
           scrollToSection={scrollToSection}
           refs={{ homeRef, aboutRef, experienceRef }}
         />
       </section>
-      <section id="about" ref={aboutRef}>
+      <section id="about" ref={aboutRef} className={visibleSection === 'about' ? 'active' : ''}>
         <AboutPage />
       </section>
-      <section id="experience" ref={experienceRef}>
+      <section id="experience" ref={experienceRef} className={visibleSection === 'experience' ? 'active' : ''}>
         <ExperiencePage />
       </section>
       <Footer />

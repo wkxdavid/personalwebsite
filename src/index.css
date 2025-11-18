@@ -13,17 +13,14 @@ code {
 }
 
 :root {
-  --primary-bg: #fdfdfc; 
-  --secondary-bg: #f4f4f4;   
-  --accent: #3b82f6;   
+  --primary-bg: #fdfdfc;
+  --secondary-bg: #f4f4f4;
+  --accent: #3b82f6;
   --text-primary: #111827;
-  /* Darken secondary text and borders for better contrast on light backgrounds */
-  --text-secondary: #374151; /* darker gray for readable secondary text */
+  --text-secondary: #374151;
   --border-color: #c7cbd1;
-  /* Home/hero background for light mode: keep it light and readable */
   --home-bg: #ffffff;
-  /* Text color to use on top of the home background */
-  --home-text: var(--text-primary);
+  --home-text: #111827;
 }
 
 
@@ -35,13 +32,11 @@ body {
   padding: 0;
 }
 
-/* Ensure App content sits above the particle canvas */
 .App {
   position: relative;
   z-index: 1;
 }
 
-/* Keep the particle canvas behind content and non-interactive */
 #tsparticles {
   position: fixed;
   inset: 0;
@@ -55,9 +50,11 @@ html.dark {
   --primary-bg: #071021;
   --secondary-bg: #0b1a2b;
   --accent: #60a5fa;
-  --text-primary: #e6eef8;
-  --text-secondary: #9fb0c6;
-  --border-color: rgba(255,255,255,0.08);
+  /* Make dark-mode primary text a bit brighter for stronger contrast */
+  --text-primary: #ffffff;
+  /* Lighter secondary text for readable body copy on dark backgrounds */
+  --text-secondary: #dbeaf7;
+  --border-color: rgba(255,255,255,0.12);
   --home-bg: #071022;
   --home-text: var(--text-primary);
 }

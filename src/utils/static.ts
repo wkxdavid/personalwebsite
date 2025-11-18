@@ -215,7 +215,7 @@ export const projects = [
 export const aboutContent = {
   greeting: 'Hello!',
   intro:
-        "I studied Informatics at the University of Washington primarily focusing on Software Engineering. Currently working as a full-stack SWE @ HP working on enterprise solutions.",
+        "I studied Informatics at the University of Washington primarily focusing on Software Engineering. Currently a full-stack SWE @ HP working on enterprise solutions.",
   activeSkills: [
     'Golang',
     'AWS',

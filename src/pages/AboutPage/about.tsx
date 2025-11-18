@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import personalImage from '../../img/DavidPham.jpg';
 import './about.css';
 import { aboutContent } from '../../utils/static';
 
 function AboutPage() {
+  useEffect(() => {
+    document.body.classList.add('about-body');
+    return () => {
+      document.body.classList.remove('about-body');
+    };
+  }, []);
   return (
     <section id='about-section' className='about-section'>
       <div className='about-container'>

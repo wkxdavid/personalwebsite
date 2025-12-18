@@ -1,9 +1,24 @@
-import React, { useMemo, useCallback, memo } from 'react';
+import React, { useMemo, useCallback, memo, useEffect, useState } from 'react';
 import Particles from 'react-tsparticles';
 import type { Engine } from 'tsparticles-engine';
 import { loadSlim } from 'tsparticles-slim';
 
 const ParticleBackground: React.FC = () => {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof window.matchMedia === 'undefined') {
+      return;
+    }
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const updatePreference = () => setPrefersReducedMotion(mediaQuery.matches);
+
+    updatePreference();
+    mediaQuery.addEventListener('change', updatePreference);
+
+    return () => mediaQuery.removeEventListener('change', updatePreference);
+  }, []);
+
   const particlesInit = useCallback(async (main: Engine): Promise<void> => {
     await loadSlim(main);
   }, []);
@@ -22,9 +37,9 @@ const ParticleBackground: React.FC = () => {
         opacity: 0.3,
         width: 1,
       },
-      move: { enable: true, speed: 1 },
+      move: { enable: true, speed: 0.7 },
       number: {
-        value: 60,
+        value: 40,
         density: { enable: true, area: 800 },
       },
       opacity: { value: 0.2 },
@@ -34,13 +49,11 @@ const ParticleBackground: React.FC = () => {
     detectRetina: true,
   }), []);
 
-  return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      options={particlesOptions}
-    />
-  );
+  if (prefersReducedMotion) {
+    return null;
+  }
+
+  return <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />;
 };
 
 export default memo(ParticleBackground);

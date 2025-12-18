@@ -35,9 +35,9 @@ export const workExperience = [
     company: 'HP Inc.',
     location: 'Seattle, WA',
     date: 'September 2025 - Present',
-    tech: 'Golang, AWS, React, Typescript, Docker, RabbitMQ',
+    tech: 'Golang, React, TypeScript, MongoDB, AWS, Docker, RabbitMQ',
     details: [
-      'Working on the Enterprise Solutions team.',
+      'Working under HP Software Solutions.',
     ],
   },
     {
@@ -46,7 +46,7 @@ export const workExperience = [
     company: 'UW Information School',
     location: 'Seattle, WA',
     date: 'September 2023 - June 2025',
-    tech: 'React, JavaScript, Express.js, Node.js, MongoDB, Azure, R, Tidyverse, Shiny, testthat',
+    tech: 'React, JavaScript, Express.js, Node.js, MongoDB, Azure, R',
     details: [
       'Supported and led instruction for INFO 201, INFO 340, and INFO 441, covering topics in full-stack web development and data science, while mentoring students on projects and coding best practices.',
     ],
@@ -57,7 +57,7 @@ export const workExperience = [
     company: 'HP Inc.',
     location: 'Boise, ID',
     date: 'May 2024 - August 2024',
-    tech: 'React, TypeScript, Java, Selenium, AWS, Jest, Enzyme',
+    tech: 'React, TypeScript, Java, AWS, Selenium, Jest, Enzyme',
     details: [
       'Developed React components for the HP Workforce Experience Platform and built a migration tool using Java to streamline enterprise workflows.',
     ],
@@ -218,11 +218,11 @@ export const aboutContent = {
         "I studied Informatics at the University of Washington primarily focusing on Software Engineering. Currently a full-stack SWE @ HP working on enterprise solutions.",
   activeSkills: [
     'Golang',
-    'AWS',
-    'TypeScript',
+    'Typescript',
     'React',
-    'Docker',
-    'CI/CD',
+    'AWS',
+    'MongoDB',
+    'RabbitMQ',
   ],
 };
 

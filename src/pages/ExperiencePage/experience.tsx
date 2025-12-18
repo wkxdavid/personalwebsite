@@ -6,6 +6,7 @@ import {
   // ProjectItem,
 } from '../../utils/static';
 import './experience.css';
+import SectionHeader from '../../components/SectionHeader';
 
 const ExperiencePage: React.FC = () => {
   const [expandedWorkIndex, setExpandedWorkIndex] = useState<number | null>(null);
@@ -45,21 +46,23 @@ const ExperiencePage: React.FC = () => {
   return (
     <div className="experience-page">
       <section id="experience-section" className="experience-section">
-        <div className="section-header">
-          <span className="section-number">02.</span>
-          <h2 className="section-title">Where I've Worked</h2>
-          <div className="section-line"></div>
-        </div>
+        <SectionHeader number="02." title="Where I've Worked" />
         
         <div className="work-container">
-          {workExperience.map((exp: ExperienceItem, index: number) => (
+          {workExperience.map((exp: ExperienceItem, index: number) => {
+            const isExpanded = expandedWorkIndex === index;
+            const detailsId = `work-details-${index}`;
+
+            return (
             <div
               key={index}
               role="button"
               tabIndex={0}
-              className={`work-card ${expandedWorkIndex === index ? 'expanded' : ''}`}
+              className={`work-card ${isExpanded ? 'expanded' : ''}`}
               onClick={() => toggleExpand(index)}
               onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleExpand(index)}
+              aria-expanded={isExpanded}
+              aria-controls={detailsId}
             >
               <div className="work-header">
                 <div className="work-title">
@@ -71,7 +74,11 @@ const ExperiencePage: React.FC = () => {
                   <span className="work-location">{exp.location}</span>
                 </div>
               </div>
-              <div className="work-details">
+              <div
+                id={detailsId}
+                className="work-details"
+                hidden={!isExpanded}
+              >
                 {exp.details.map((detail, detailIndex) => (
                   <p key={detailIndex}>{detail}</p>
                 ))}
@@ -83,8 +90,13 @@ const ExperiencePage: React.FC = () => {
                 )}
               </div>
             </div>
-          ))}
+          )})}
         </div>
+
+        <p className="experience-contact-note">
+          For more details about any of these roles or an resume, feel free to email me at{' '}
+          <a href="mailto:phamdavid722@gmail.com">phamdavid722@gmail.com</a>.
+        </p>
       </section>
 
       {/* Projects section commented out */}

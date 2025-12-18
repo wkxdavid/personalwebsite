@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import personalImage from '../../img/DavidPham.jpg';
 import './about.css';
 import { aboutContent } from '../../utils/static';
+import SectionHeader from '../../components/SectionHeader';
 
 function AboutPage() {
   useEffect(() => {
@@ -14,11 +15,7 @@ function AboutPage() {
   return (
     <section id='about-section' className='about-section'>
       <div className='about-container'>
-        <div className='section-header'>
-          <span className='section-number'>01.</span>
-          <h2 className='section-title'>About Me</h2>
-          <div className='section-line'></div>
-        </div>
+        <SectionHeader number="01." title="About Me" />
 
         <div className='about-content'>
           <div className='about-text'>
@@ -32,6 +29,15 @@ function AboutPage() {
               I believe in writing clean, maintainable code and creating experiences that users actually 
               enjoy. Whether it's full-stack development, data analysis, or mobile apps, I love the 
               challenge of turning ideas into reality.
+            </p>
+
+            <p className='about-intro'>
+              If you'd like a copy of my resume or a deeper breakdown of any experience,
+              you can reach me at{' '}
+              <a href='mailto:phamdavid722@gmail.com' className='highlight'>
+                phamdavid722@gmail.com
+              </a>
+              .
             </p>
 
             {aboutContent.activeSkills && aboutContent.activeSkills.length > 0 && (

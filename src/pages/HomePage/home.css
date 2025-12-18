@@ -228,10 +228,14 @@
 
   .home-content {
     text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
   .intro-text {
-    text-align: left;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .home-actions {
@@ -245,6 +249,10 @@
   }
 
   .social-links {
+    justify-content: center;
+  }
+
+  .role-container {
     justify-content: center;
   }
 }

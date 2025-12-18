@@ -1,12 +1,11 @@
 .resume-section {
-  padding: 50px;
+  padding: 32px;
   text-align: center;
   max-width: 900px;
   margin: 20px auto;
   background: linear-gradient(135deg, #ffffff, #f8f9fa);
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  opacity: 0;
 }
 
 .resume-section:hover {
@@ -17,7 +16,6 @@
   margin-bottom: 30px;
   font-size: 2rem;
   color: #333333;
-  opacity: 0;
 }
 
 .resume-section p {
@@ -26,13 +24,27 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 480px) {
+  .resume-section {
+    padding: 20px;
+    margin: 16px auto;
+  }
+
+  .resume-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .resume-section p {
+    font-size: 1rem;
+  }
+}
+
 .resume-section div {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
   background-color: #f9f9f9;
   box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
-  opacity: 0;
 }
 
 @media (min-width: 768px) {

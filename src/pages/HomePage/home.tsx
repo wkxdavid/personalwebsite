@@ -39,7 +39,7 @@ const HomePage: React.FC<HomePageProps> = ({ scrollToSection, refs }) => {
           </div>
           
           <p className='intro-text'>
-            Building full-stack solutions at HP Inc. and turning ideas into code. Currently learning enterprise development in 
+            Recent graduate building full-stack solutions at HP Inc. turning ideas into code. Currently learning enterprise development in 
             <span className='highlight'> Golang. </span> 
           </p>
 

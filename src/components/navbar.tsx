@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../img/dp-new-transparent.png';
 import { FaLinkedin, FaGithub, FaEnvelope, FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
-import '../styles/navbar.css'
+import '../styles/navbar.css';
+import { SectionConfig, SectionId } from '../config/sections';
 
 interface NavbarProps {
   scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
-  refs: {
-    home: React.RefObject<HTMLElement>;
-    about: React.RefObject<HTMLElement>;
-    experience: React.RefObject<HTMLElement>;
-  };
-  activeSection: 'home' | 'about' | 'experience';
+  refs: Record<SectionId, React.RefObject<HTMLElement>>;
+  sections: SectionConfig[];
+  activeSection: SectionId;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs, activeSection }) => {
+const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs, sections, activeSection }) => {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     try {
       const stored = localStorage.getItem('theme');
@@ -46,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs, activeSection })
 
   const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
 
-  const handleClick = (section: keyof typeof refs) => {
+  const handleClick = (section: SectionId) => {
     scrollToSection(refs[section]);
     setIsMobileMenuOpen(false);
   };
@@ -62,30 +60,16 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs, activeSection })
         </div>
 
         <ul className={`navbar-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <li>
-            <button
-              onClick={() => handleClick('home')}
-              className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}
-            >
-              <span>Home</span>
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => handleClick('about')}
-              className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-            >
-              <span>About</span>
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => handleClick('experience')}
-              className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`}
-            >
-              <span>Experience</span>
-            </button>
-          </li>
+          {sections.map((section) => (
+            <li key={section.id}>
+              <button
+                onClick={() => handleClick(section.id)}
+                className={`nav-link ${activeSection === section.id ? 'active' : ''}`}
+              >
+                <span>{section.label}</span>
+              </button>
+            </li>
+          ))}
         </ul>
 
         <div className="navbar-right">

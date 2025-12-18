@@ -177,6 +177,22 @@
 }
 
 @media only screen and (max-width: 968px) {
+  .about-section {
+    justify-content: center;
+  }
+
+  .about-container {
+    text-align: center;
+  }
+
+  .section-header {
+    justify-content: center;
+  }
+
+  .section-line {
+    display: none;
+  }
+
   .about-content {
     grid-template-columns: 1fr;
     gap: var(--space-2xl);
@@ -218,17 +234,11 @@
     padding: 0 var(--space-md);
   }
 
-  .section-header {
-    flex-wrap: wrap;
-  }
-
-  .section-line {
-    width: 100%;
-    margin-left: 0;
-    margin-top: var(--space-sm);
-  }
-
   .about-intro {
     font-size: 1rem;
+  }
+
+  .section-title {
+    white-space: normal;
   }
 }

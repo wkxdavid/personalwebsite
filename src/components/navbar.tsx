@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../img/dp-new-transparent.png';
-import { FaLinkedin, FaGithub, FaEnvelope, FaMoon, FaSun } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import '../styles/navbar.css'
 
 interface NavbarProps {
@@ -17,13 +17,14 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs }) => {
     try {
       const stored = localStorage.getItem('theme');
         if (stored === 'light' || stored === 'dark') return stored;
-        // default to dark mode when no stored preference
         return 'dark';
     } catch (e) {
-      //  fallback to light mode
     }
     return 'light';
   });
+
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     try {
@@ -34,45 +35,94 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs }) => {
     }
   }, [theme]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
 
   const handleClick = (section: keyof typeof refs) => {
     scrollToSection(refs[section]);
+    setIsMobileMenuOpen(false);
   };
 
   return (
-    <nav className="custom-navbar">
+    <nav className={`custom-navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-inner">
         <div className="navbar-left" onClick={() => handleClick('home')}>
-          <img src={logo} alt="DP logo" className="navbar-logo" />
+          <div className="navbar-logo-wrapper">
+            <img src={logo} alt="DP logo" className="navbar-logo" />
+          </div>
           <span className="navbar-name">David Pham</span>
         </div>
 
-        <ul className="navbar-links">
+        <ul className={`navbar-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           <li>
-            <button onClick={() => handleClick('home')}>Home</button>
+            <button onClick={() => handleClick('home')} className="nav-link">
+              <span>Home</span>
+            </button>
           </li>
           <li>
-            <button onClick={() => handleClick('about')}>About</button>
+            <button onClick={() => handleClick('about')} className="nav-link">
+              <span>About</span>
+            </button>
           </li>
           <li>
-            <button onClick={() => handleClick('experience')}>Work</button>
+            <button onClick={() => handleClick('experience')} className="nav-link">
+              <span>Work</span>
+            </button>
           </li>
         </ul>
 
-        <div className="navbar-icons">
-          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
-            {theme === 'dark' ? <FaSun /> : <FaMoon />}
+        <div className="navbar-right">
+          <div className="navbar-icons">
+            <button 
+              className="theme-toggle" 
+              onClick={toggleTheme} 
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <FaSun /> : <FaMoon />}
+            </button>
+            <a 
+              href="mailto:phamdavid722@gmail.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-icon"
+              aria-label="Email"
+            >
+              <FaEnvelope />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/phamdavid722" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-icon"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+            <a 
+              href="https://github.com/wkxdavid" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-icon"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
+          </div>
+          
+          <button 
+            className="mobile-menu-toggle"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
-          <a href="mailto:phamdavid722@gmail.com" target="_blank" rel="noopener noreferrer">
-            <FaEnvelope />
-          </a>
-          <a href="https://www.linkedin.com/in/phamdavid722" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin />
-          </a>
-          <a href="https://github.com/wkxdavid" target="_blank" rel="noopener noreferrer">
-            <FaGithub />
-          </a>
         </div>
       </div>
     </nav>

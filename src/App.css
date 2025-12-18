@@ -1,26 +1,21 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: var(--primary-bg);
-  color: var(--text-primary);
-  overflow: auto;
-}
-
-html {
-  overflow: auto;
+.App {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .navbar-container {
-  transition: opacity 0.4s ease;
+  width: 100%;
 }
 
 .App-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: opacity 0.4s ease;
+  transition: opacity var(--transition-base);
 }
 
 .App-header.show {
@@ -34,56 +29,121 @@ html {
 }
 
 .fade-in {
-  animation: fadeIn 0.4s ease forwards;
+  animation: fadeIn var(--transition-base) forwards;
 }
 
 .fade-out {
-  animation: fadeOut 0.4s ease forwards;
+  animation: fadeOut var(--transition-base) forwards;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { 
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to { 
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 
+/* Section styling */
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 72px;
+}
+
+section.active {
+  animation: sectionFadeIn 0.6s ease-out forwards;
+}
+
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .App-footer {
-  background-color: var(--border-color);
+  background: var(--secondary-bg);
+  border-top: 1px solid var(--border-color);
   color: var(--text-secondary);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 0px;
+  justify-content: center;
+  padding: var(--space-2xl) var(--space-lg);
   text-align: center;
+  margin-top: var(--space-3xl);
 }
 
 .copyright {
-  padding-top: 5px;
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  margin: 0;
 }
 
 .contact-info {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
 }
 
 .App-footer p {
-  margin-top: 0px;
+  margin: 0;
   color: var(--text-secondary);
 }
 
 .App-footer p a {
   color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-base);
 }
 
 .App-footer p a:hover {
   color: var(--accent);
+}
+
+.main-content {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Container utility */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-lg);
+  }
+  
+  section {
+    padding-top: 64px;
+  }
 }
 

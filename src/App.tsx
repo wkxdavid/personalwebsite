@@ -13,7 +13,6 @@ function App() {
   const aboutRef = useRef<HTMLElement | null>(null);
   const experienceRef = useRef<HTMLElement | null>(null);
   const [visibleSection, setVisibleSection] = useState('home');
-  const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
@@ -46,10 +45,6 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    setShowNavbar(visibleSection === 'about' || visibleSection === 'experience');
-  }, [visibleSection]);
-
   const scrollToSection = (ref: RefObject<HTMLElement>) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -57,37 +52,34 @@ function App() {
   return (
     <div className="App">
       <ParticleBackground />
-      {showNavbar && (
-        <header className="App-header">
-          <div
-            className={`navbar-container ${
-              showNavbar ? 'fade-in' : 'fade-out'
-            }`}
-          >
-            <Navbar
-              scrollToSection={scrollToSection}
-              refs={{
-                home: homeRef,
-                about: aboutRef,
-                experience: experienceRef,
-              }}
-            />
-          </div>
-        </header>
-      )}
+      <header className="App-header">
+        <div className="navbar-container">
+          <Navbar
+            scrollToSection={scrollToSection}
+            refs={{
+              home: homeRef,
+              about: aboutRef,
+              experience: experienceRef,
+            }}
+          />
+        </div>
+      </header>
 
-      <section id="home" ref={homeRef} className={visibleSection === 'home' ? 'active' : ''}>
-        <HomePage
-          scrollToSection={scrollToSection}
-          refs={{ homeRef, aboutRef, experienceRef }}
-        />
-      </section>
-      <section id="about" ref={aboutRef} className={visibleSection === 'about' ? 'active' : ''}>
-        <AboutPage />
-      </section>
-      <section id="experience" ref={experienceRef} className={visibleSection === 'experience' ? 'active' : ''}>
-        <ExperiencePage />
-      </section>
+      <main className="main-content">
+        <section id="home" ref={homeRef} className={visibleSection === 'home' ? 'active' : ''}>
+          <HomePage
+            scrollToSection={scrollToSection}
+            refs={{ homeRef, aboutRef, experienceRef }}
+          />
+        </section>
+        <section id="about" ref={aboutRef} className={visibleSection === 'about' ? 'active' : ''}>
+          <AboutPage />
+        </section>
+        <section id="experience" ref={experienceRef} className={visibleSection === 'experience' ? 'active' : ''}>
+          <ExperiencePage />
+        </section>
+      </main>
+      
       <Footer />
       <Analytics />
     </div>

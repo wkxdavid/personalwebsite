@@ -1,46 +1,36 @@
-import React, { useState, useCallback, MouseEvent } from 'react';
-import Slider from 'react-slick';
+import React, { useState } from 'react';
 import {
   workExperience,
-  extracurricular,
-  projects,
+  // projects,
   ExperienceItem,
-  ProjectItem,
+  // ProjectItem,
 } from '../../utils/static';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import './experience.css';
-import { NextArrow, PrevArrow } from '../../components/sliderArrows';
 
 const ExperiencePage: React.FC = () => {
   const [expandedWorkIndex, setExpandedWorkIndex] = useState<number | null>(null);
-  const [expandedExtraIndex, setExpandedExtraIndex] = useState<number | null>(null);
-  const [isPopupVisible, setIsPopupVisible] = useState(false);
-  const [popupContent, setPopupContent] = useState<ProjectItem | null>(null);
+  // const [isPopupVisible, setIsPopupVisible] = useState(false);
+  // const [popupContent, setPopupContent] = useState<ProjectItem | null>(null);
 
-  const toggleExpand = (index: number, type: 'work' | 'extra') => {
-    if (type === 'work') {
-      setExpandedWorkIndex(expandedWorkIndex === index ? null : index);
-    } else {
-      setExpandedExtraIndex(expandedExtraIndex === index ? null : index);
-    }
+  const toggleExpand = (index: number) => {
+    setExpandedWorkIndex(expandedWorkIndex === index ? null : index);
   };
 
-  const openPopup = useCallback((content: ProjectItem) => {
-    setPopupContent(content);
-    setIsPopupVisible(true);
-  }, []);
+  // const openPopup = useCallback((content: ProjectItem) => {
+  //   setPopupContent(content);
+  //   setIsPopupVisible(true);
+  // }, []);
 
-  const closePopup = useCallback(() => {
-    setIsPopupVisible(false);
-    setPopupContent(null);
-  }, []);
+  // const closePopup = useCallback(() => {
+  //   setIsPopupVisible(false);
+  //   setPopupContent(null);
+  // }, []);
 
-  const handleOverlayClick = (e: MouseEvent<HTMLDivElement>) => {
-    if ((e.target as HTMLElement).classList.contains('popup-overlay')) {
-      closePopup();
-    }
-  };
+  // const handleOverlayClick = (e: MouseEvent<HTMLDivElement>) => {
+  //   if ((e.target as HTMLElement).classList.contains('popup-overlay')) {
+  //     closePopup();
+  //   }
+  // };
 
   const renderTechTags = (techString: string) => {
     return (
@@ -52,62 +42,36 @@ const ExperiencePage: React.FC = () => {
     );
   };
 
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    swipeToSlide: true,
-    lazyLoad: 'ondemand' as const,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-        },
-      },
-    ],
-  };
-
   return (
     <div className="experience-page">
       <section id="experience-section" className="experience-section">
-        <h1>Work Experience</h1>
-        <h3>Technical Contributions</h3>
+        <div className="section-header">
+          <span className="section-number">02.</span>
+          <h2 className="section-title">Where I've Worked</h2>
+          <div className="section-line"></div>
+        </div>
+        
         <div className="work-container">
           {workExperience.map((exp: ExperienceItem, index: number) => (
             <div
               key={index}
               role="button"
               tabIndex={0}
-              className="work-card"
-              onClick={() => toggleExpand(index, 'work')}
-              onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleExpand(index, 'work')}
+              className={`work-card ${expandedWorkIndex === index ? 'expanded' : ''}`}
+              onClick={() => toggleExpand(index)}
+              onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleExpand(index)}
             >
               <div className="work-header">
                 <div className="work-title">
-                  <h2>{exp.title}</h2>
-                  <h4>{exp.company}</h4>
+                  <h3>{exp.title}</h3>
+                  <h4>@ {exp.company}</h4>
                 </div>
                 <div className="work-meta">
-                  <span>{exp.location}</span>
-                  <span>{exp.date}</span>
+                  <span className="work-date">{exp.date}</span>
+                  <span className="work-location">{exp.location}</span>
                 </div>
               </div>
-              <div className={`work-details ${expandedWorkIndex === index ? 'expanded' : ''}`}>
+              <div className="work-details">
                 {exp.details.map((detail, detailIndex) => (
                   <p key={detailIndex}>{detail}</p>
                 ))}
@@ -123,72 +87,48 @@ const ExperiencePage: React.FC = () => {
         </div>
       </section>
 
-      {/* <section id="extracurricular-section" className="experience-section">
-        <h1>Extracurricular Activities</h1>
-        <h3>Leadership & Involvement</h3>
-        <div className="work-container">
-          {extracurricular.map((activity: ExperienceItem, index: number) => (
+      {/* Projects section commented out */}
+      {/* <section id="projects-section" className="projects-section">
+        <div className="section-header">
+          <span className="section-number">03.</span>
+          <h2 className="section-title">Some Things I've Built</h2>
+          <div className="section-line"></div>
+        </div>
+        
+        <div className="projects-grid">
+          {projects.map((project: ProjectItem, index: number) => (
             <div
               key={index}
+              className="project-card"
+              onClick={() => openPopup(project)}
+              onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && openPopup(project)}
               role="button"
               tabIndex={0}
-              className="work-card"
-              onClick={() => toggleExpand(index, 'extra')}
-              onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleExpand(index, 'extra')}
             >
-              <div className="work-header">
-                <div className="work-title">
-                  <h2>{activity.title}</h2>
-                  <h4>{activity.company}</h4>
+              {project.image && (
+                <div className="project-image-wrapper">
+                  <img
+                    src={project.image}
+                    alt={project.alt || project.title}
+                    className="project-image"
+                  />
+                  <div className="project-overlay"></div>
                 </div>
-                <div className="work-meta">
-                  <span>{activity.location}</span>
-                  <span>{activity.date}</span>
-                </div>
-              </div>
-              <div className={`work-details ${expandedExtraIndex === index ? 'expanded' : ''}`}>
-                {activity.details.map((detail, detailIndex) => (
-                  <p key={detailIndex}>{detail}</p>
-                ))}
-                {activity.tech && (
-                  <div className="tech-stack">
-                    <strong>Tech Stack:</strong>
-                    {renderTechTags(activity.tech)}
+              )}
+              <div className="project-content">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                {project.tech && (
+                  <div className="project-tech">
+                    {renderTechTags(project.tech)}
                   </div>
                 )}
               </div>
             </div>
           ))}
         </div>
-      </section> */}
+      </section>
 
-      {/* <section id="projects-section" className="projects-section">
-        <h1>Projects</h1>
-        <h3>Turning Ideas into Code</h3>
-        <div className="project-slider-container">
-          <Slider {...sliderSettings}>
-            {projects.map((project: ProjectItem, index: number) => (
-              <div
-                key={index}
-                role="button"
-                tabIndex={0}
-                className="project-card"
-                onClick={() => openPopup(project)}
-                onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && openPopup(project)}
-              >
-                {project.image && (
-                  <img
-                    src={project.image}
-                    alt={project.alt}
-                    className="project-image"
-                  />
-                )}
-                <h2>{project.title}</h2>
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </section> */}
 
       {isPopupVisible && popupContent && (
         <div className="popup-overlay active" onClick={handleOverlayClick}>
@@ -216,7 +156,7 @@ const ExperiencePage: React.FC = () => {
             )}
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

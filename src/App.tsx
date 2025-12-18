@@ -13,6 +13,7 @@ function App() {
   const aboutRef = useRef<HTMLElement | null>(null);
   const experienceRef = useRef<HTMLElement | null>(null);
   const [visibleSection, setVisibleSection] = useState('home');
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
@@ -45,6 +46,17 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({
+        x: (e.clientX / window.innerWidth) * 100,
+        y: (e.clientY / window.innerHeight) * 100,
+      });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   const scrollToSection = (ref: RefObject<HTMLElement>) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -52,7 +64,14 @@ function App() {
   return (
     <div className="App">
       <ParticleBackground />
-      <header className="App-header">
+      <div 
+        className='gradient-orb' 
+        style={{
+          left: `${mousePosition.x}%`,
+          top: `${mousePosition.y}%`,
+        }}
+      />
+      <header className={`App-header ${visibleSection === 'home' ? 'hide' : 'show'}`}>
         <div className="navbar-container">
           <Navbar
             scrollToSection={scrollToSection}
@@ -61,6 +80,7 @@ function App() {
               about: aboutRef,
               experience: experienceRef,
             }}
+            activeSection={visibleSection as 'home' | 'about' | 'experience'}
           />
         </div>
       </header>

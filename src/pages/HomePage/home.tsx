@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import './home.css';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
-import ParticleBackground from '../../components/particleBackground';
+import { FaLinkedin, FaGithub, FaEnvelope, FaArrowDown } from 'react-icons/fa';
 
 interface HomePageProps {
   scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
@@ -26,55 +25,75 @@ const HomePage: React.FC<HomePageProps> = ({ scrollToSection, refs }) => {
 
   return (
     <section id='home-section' className='home-section'>
-      <ParticleBackground />
-
       <div className='home-container'>
-        <div className='home-text'>
-          <h1>David Pham</h1>
-          <h2>Software Engineer</h2>
-          <div className='contact-info'>
-            <div className='link-item'>
-              <a href='mailto:phamdavid722@gmail.com'>
-                <FaEnvelope size={30} />
-                <p>phamdavid722@gmail.com</p>
-              </a>
-            </div>
-            <div className='link-item'>
-              <a
-                href='https://www.linkedin.com/in/phamdavid722'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <FaLinkedin size={30} />
-                <p>phamdavid722</p>
-              </a>
-            </div>
-            <div className='link-item'>
-              <a
-                href='https://github.com/wkxdavid'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <FaGithub size={30} />
-                <p>wkxdavid</p>
-              </a>
-            </div>
+        <div className='home-content'>
+          <div className='greeting-text'>Hey there, I'm</div>
+          
+          <h1 className='name-text'>
+            <span className='name-gradient'>David Pham</span>
+          </h1>
+          
+          <div className='role-container'>
+            <span className='role-text'>Software Engineer</span>
+            <span className='role-cursor'>|</span>
           </div>
-          <div className='home-buttons'>
+          
+          <p className='intro-text'>
+            Building full-stack solutions at HP Inc. and turning ideas into code. Currently learning enterprise development in 
+            <span className='highlight'> Golang. </span> 
+          </p>
+
+          <div className='home-actions'>
             <button
               onClick={() => handleScrollTo('aboutRef')}
-              className='home-button'
+              className='home-button primary'
             >
-              About
+              Learn More
             </button>
             <button
               onClick={() => handleScrollTo('experienceRef')}
-              className='home-button'
+              className='home-button secondary'
             >
-              Work
+              View Experience
             </button>
           </div>
+
+          <div className='social-links'>
+            <a 
+              href='mailto:phamdavid722@gmail.com'
+              className='social-link'
+              aria-label='Email'
+            >
+              <FaEnvelope />
+            </a>
+            <a
+              href='https://www.linkedin.com/in/phamdavid722'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='social-link'
+              aria-label='LinkedIn'
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href='https://github.com/wkxdavid'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='social-link'
+              aria-label='GitHub'
+            >
+              <FaGithub />
+            </a>
+          </div>
         </div>
+
+        <button 
+          className='scroll-indicator'
+          onClick={() => handleScrollTo('aboutRef')}
+          aria-label='Scroll down'
+        >
+          <FaArrowDown />
+        </button>
       </div>
     </section>
   );

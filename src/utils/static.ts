@@ -59,7 +59,7 @@ export const workExperience = [
     date: 'May 2024 - August 2024',
     tech: 'React, TypeScript, Java, Selenium, AWS, Jest, Enzyme',
     details: [
-      'Developed React components for the HP Workforce Experience Platform and enhanced backend APIs using Java to streamline enterprise workflows.',
+      'Developed React components for the HP Workforce Experience Platform and built a migration tool using Java to streamline enterprise workflows.',
     ],
   },
   {
@@ -70,7 +70,7 @@ export const workExperience = [
     date: 'January 2024 - May 2024',
     tech: 'JavaScript, Express.js, Node.js, Amazon DynamoDB',
     details: [
-      'Built and maintained scalable RESTful API endpoints using Express.js and integrated Amazon DynamoDB for data access.',
+      'Student start up experience building backend REST APIs endpoints for recipe information.',
     ],
   },
   {

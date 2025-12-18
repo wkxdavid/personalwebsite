@@ -134,6 +134,15 @@
   transform: scale(1);
 }
 
+.nav-link.active {
+  color: white;
+}
+
+.nav-link.active::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .navbar-right {
   display: flex;
   align-items: center;

@@ -5,6 +5,26 @@
   overflow-x: hidden;
 }
 
+.gradient-orb {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-out;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .gradient-orb {
+    width: 400px;
+    height: 400px;
+  }
+}
+
 .navbar-container {
   width: 100%;
 }
@@ -64,22 +84,9 @@ section {
   width: 100%;
   min-height: 100vh;
   padding-top: 72px;
+  opacity: 1;
 }
 
-section.active {
-  animation: sectionFadeIn 0.6s ease-out forwards;
-}
-
-@keyframes sectionFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .App-footer {
   background: var(--secondary-bg);

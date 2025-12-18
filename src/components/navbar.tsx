@@ -10,9 +10,10 @@ interface NavbarProps {
     about: React.RefObject<HTMLElement>;
     experience: React.RefObject<HTMLElement>;
   };
+  activeSection: 'home' | 'about' | 'experience';
 }
 
-const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs }) => {
+const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs, activeSection }) => {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     try {
       const stored = localStorage.getItem('theme');
@@ -62,18 +63,27 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection, refs }) => {
 
         <ul className={`navbar-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           <li>
-            <button onClick={() => handleClick('home')} className="nav-link">
+            <button
+              onClick={() => handleClick('home')}
+              className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}
+            >
               <span>Home</span>
             </button>
           </li>
           <li>
-            <button onClick={() => handleClick('about')} className="nav-link">
+            <button
+              onClick={() => handleClick('about')}
+              className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
+            >
               <span>About</span>
             </button>
           </li>
           <li>
-            <button onClick={() => handleClick('experience')} className="nav-link">
-              <span>Work</span>
+            <button
+              onClick={() => handleClick('experience')}
+              className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`}
+            >
+              <span>Experience</span>
             </button>
           </li>
         </ul>

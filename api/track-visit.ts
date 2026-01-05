@@ -7,13 +7,19 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const body = (req.body || {}) as { path?: string };
+    const body = (req.body || {}) as { path?: string; visitor_id?: string };
     const path = body.path || '/';
+    const visitorId = body.visitor_id || null;
     const userAgent = (req.headers['user-agent'] as string) || '';
 
+    // Vercel automatically provides geo headers we can use for approximate location
+    const country = (req.headers['x-vercel-ip-country'] as string) || null;
+    const region = (req.headers['x-vercel-ip-country-region'] as string) || null;
+    const city = (req.headers['x-vercel-ip-city'] as string) || null;
+
     await sql`
-      INSERT INTO visits (path, user_agent)
-      VALUES (${path}, ${userAgent})
+      INSERT INTO visits (path, user_agent, country, region, city, visitor_id)
+      VALUES (${path}, ${userAgent}, ${country}, ${region}, ${city}, ${visitorId})
     `;
 
     return res.status(200).json({ ok: true });

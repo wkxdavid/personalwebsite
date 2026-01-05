@@ -8,6 +8,7 @@ import ExperiencePage from './pages/ExperiencePage/experience';
 import HomePage from './pages/HomePage/home';
 import { Analytics } from '@vercel/analytics/react';
 import { SECTIONS, SectionId } from './config/sections';
+import { getVisitorId } from './utils/visitorId';
 
 function App() {
   const homeRef = useRef<HTMLElement | null>(null);
@@ -20,13 +21,20 @@ function App() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
+    // Get or create visitor ID from cookie
+    const visitorId = getVisitorId();
+
     fetch('/api/track-visit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ path: window.location.pathname }),
+      body: JSON.stringify({ 
+        path: window.location.pathname,
+        visitor_id: visitorId,
+      }),
     }).catch(() => {
+      // Ignore errors on the client; this is best-effort logging
     });
   }, []);
 

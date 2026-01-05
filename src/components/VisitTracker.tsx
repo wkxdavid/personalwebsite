@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaClock, FaTrash } from 'react-icons/fa';
+import { FaClock, FaTrash, FaUser, FaUserPlus } from 'react-icons/fa';
 import './VisitTracker.css';
 
 interface VisitRecord {
@@ -7,6 +7,12 @@ interface VisitRecord {
   created_at: string;
   path: string;
   user_agent?: string;
+  country?: string | null;
+  region?: string | null;
+  city?: string | null;
+  visitor_id?: string | null;
+  is_repeat_visitor?: boolean;
+  visitor_visit_count?: number;
 }
 
 const VisitTracker: React.FC = () => {
@@ -36,8 +42,8 @@ const VisitTracker: React.FC = () => {
 
   const handleClear = async () => {
     if (window.confirm('Are you sure you want to clear all visit records? This action cannot be undone.')) {
-      // Note: You'll need to create a DELETE endpoint if you want to clear visits
-      // For now, we'll just clear the local state
+      // Note: You'll need a DELETE endpoint if you want to clear visits in the DB.
+      // For now, we'll just clear the local state.
       setVisits([]);
     }
   };
@@ -83,7 +89,7 @@ const VisitTracker: React.FC = () => {
             </div>
           ) : visits.length === 0 ? (
             <div className="no-visits">
-              <p>No visits recorded yet.</p>
+              <p>No visits recorded in the last 30 days.</p>
             </div>
           ) : (
             <div className="visits-list">
@@ -101,12 +107,39 @@ const VisitTracker: React.FC = () => {
                   hour12: true,
                 });
 
+                const locationParts = [
+                  visit.city,
+                  visit.region,
+                  visit.country,
+                ].filter(Boolean);
+
+                const location =
+                  locationParts.length > 0 ? locationParts.join(', ') : 'Unknown location';
+                
+                const isRepeat = visit.is_repeat_visitor === true;
+                const visitCount = visit.visitor_visit_count || 1;
+
                 return (
                   <div key={visit.id} className="visit-item">
                     <div className="visit-number">{index + 1}</div>
                     <div className="visit-details">
-                      <div className="visit-date">{date}</div>
+                      <div className="visit-header-row">
+                        <div className="visit-date">{date}</div>
+                        {isRepeat && (
+                          <span className="visitor-badge repeat" title={`This visitor has visited ${visitCount} time${visitCount !== 1 ? 's' : ''}`}>
+                            <FaUser />
+                            Repeat Visitor
+                          </span>
+                        )}
+                        {!isRepeat && (
+                          <span className="visitor-badge new" title="First visit from this visitor">
+                            <FaUserPlus />
+                            New Visitor
+                          </span>
+                        )}
+                      </div>
                       <div className="visit-time">{time}</div>
+                      <div className="visit-location">{location}</div>
                     </div>
                   </div>
                 );

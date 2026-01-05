@@ -31,15 +31,6 @@ function AboutPage() {
               challenge of turning ideas into reality.
             </p>
 
-            <p className='about-intro'>
-              If you'd like a copy of my resume or a deeper breakdown of any experience,
-              you can reach me at{' '}
-              <a href='mailto:phamdavid722@gmail.com' className='highlight'>
-                phamdavid722@gmail.com
-              </a>
-              .
-            </p>
-
             {aboutContent.activeSkills && aboutContent.activeSkills.length > 0 && (
               <div className='about-skills'>
                 <h3>Technologies I'm currently working with:</h3>

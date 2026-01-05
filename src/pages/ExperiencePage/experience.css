@@ -42,22 +42,6 @@
   padding: 0 var(--space-xl);
 }
 
-.experience-contact-note {
-  margin-top: var(--space-2xl);
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  text-align: left;
-}
-
-.experience-contact-note a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.experience-contact-note a:hover {
-  text-decoration: underline;
-}
-
 .work-container {
   display: flex;
   flex-direction: column;
@@ -507,8 +491,6 @@
   .work-card {
     padding: var(--space-lg);
     margin: 0 auto var(--space-lg);
-    width: 100%;
-    max-width: 600px;
   }
 
   .work-card::before {

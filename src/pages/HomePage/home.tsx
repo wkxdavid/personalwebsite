@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import './home.css';
 import { FaLinkedin, FaGithub, FaEnvelope, FaArrowDown } from 'react-icons/fa';
+import VisitTracker from '../../components/VisitTracker';
 
 interface HomePageProps {
-  scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
+  scrollToSection: (ref: React.RefObject<HTMLElement | null>) => void;
   refs: {
-    homeRef: React.RefObject<HTMLElement>;
-    aboutRef: React.RefObject<HTMLElement>;
-    experienceRef: React.RefObject<HTMLElement>;
+    homeRef: React.RefObject<HTMLElement | null>;
+    aboutRef: React.RefObject<HTMLElement | null>;
+    experienceRef: React.RefObject<HTMLElement | null>;
   };
 }
 
@@ -38,10 +39,10 @@ const HomePage: React.FC<HomePageProps> = ({ scrollToSection, refs }) => {
             <span className='role-cursor'>|</span>
           </div>
           
-          <p className='intro-text'>
-            Recent graduate building full-stack solutions at HP Inc. turning ideas into code. Currently learning enterprise development in 
-            <span className='highlight'> Golang. </span> 
-          </p>
+          {/* <p className='intro-text'>
+            Recent graduate building full-stack solutions at HP Inc.
+            <span className='highlight'> </span> 
+          </p> */}
 
           <div className='home-actions'>
             <button
@@ -95,6 +96,7 @@ const HomePage: React.FC<HomePageProps> = ({ scrollToSection, refs }) => {
           <FaArrowDown />
         </button>
       </div>
+      <VisitTracker />
     </section>
   );
 };

@@ -1,0 +1,230 @@
+.visit-tracker {
+  position: fixed;
+  bottom: var(--space-xl);
+  right: var(--space-xl);
+  z-index: 100;
+  font-family: var(--font-family);
+}
+
+.visit-tracker-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.visit-tracker-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
+.visit-tracker-toggle svg {
+  font-size: 1rem;
+}
+
+.visit-count {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.visit-label {
+  font-size: 0.85rem;
+}
+
+.visit-tracker-content {
+  position: absolute;
+  bottom: calc(100% + var(--space-md));
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.visit-tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--glass-bg);
+}
+
+.visit-tracker-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.clear-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.clear-button:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.clear-button svg {
+  font-size: 0.9rem;
+}
+
+.no-visits {
+  padding: var(--space-2xl);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.no-visits p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.visits-list {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: var(--space-sm);
+}
+
+.visits-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.visits-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.visits-list::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+}
+
+.visits-list::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+.visit-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  margin-bottom: var(--space-xs);
+}
+
+.visit-item:hover {
+  background: var(--secondary-bg);
+  transform: translateX(-2px);
+}
+
+.visit-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-accent);
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.visit-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.visit-date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.visit-time {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 768px) {
+  .visit-tracker {
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+  }
+
+  .visit-tracker-content {
+    width: calc(100vw - var(--space-2xl));
+    max-width: 320px;
+    right: 0;
+  }
+
+  .visit-tracker-toggle {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.85rem;
+  }
+
+  .visit-count {
+    font-size: 1rem;
+  }
+
+  .visit-label {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .visit-tracker {
+    bottom: var(--space-md);
+    right: var(--space-md);
+  }
+
+  .visit-tracker-content {
+    width: calc(100vw - var(--space-xl));
+  }
+}
+

@@ -5,8 +5,8 @@ import '../styles/navbar.css';
 import { SectionConfig, SectionId } from '../config/sections';
 
 interface NavbarProps {
-  scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
-  refs: Record<SectionId, React.RefObject<HTMLElement>>;
+  scrollToSection: (ref: React.RefObject<HTMLElement | null>) => void;
+  refs: Record<SectionId, React.RefObject<HTMLElement | null>>;
   sections: SectionConfig[];
   activeSection: SectionId;
 }

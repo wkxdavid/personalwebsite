@@ -18,6 +18,19 @@ function App() {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    fetch('/api/track-visit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ path: window.location.pathname }),
+    }).catch(() => {
+    });
+  }, []);
+
+  useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
       root: null,
       threshold: 0.5,
@@ -87,7 +100,7 @@ function App() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, [prefersReducedMotion]);
 
-  const scrollToSection = (ref: RefObject<HTMLElement>) => {
+  const scrollToSection = (ref: RefObject<HTMLElement | null>) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 

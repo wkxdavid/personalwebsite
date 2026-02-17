@@ -33,21 +33,18 @@ function AboutPage() {
 
             {aboutContent.activeSkills && aboutContent.activeSkills.length > 0 && (
               <div className='about-skills'>
-                <h3>Technologies I'm currently working with:</h3>
-                <div className='skill-tags'>
+                <h3>Currently working with:</h3>
+                <ul className='skill-list'>
                   {aboutContent.activeSkills.map((skill, idx) => (
-                    <span key={idx} className='skill-tag'>
-                      {skill}
-                    </span>
+                    <li key={idx}>{skill}</li>
                   ))}
-                </div>
+                </ul>
               </div>
             )}
           </div>
 
           <div className='about-image-wrapper'>
             <div className='about-image'>
-              <div className='image-border'></div>
               <img src={personalImage} alt='David Pham smiling in a suit' />
             </div>
           </div>

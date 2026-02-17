@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   workExperience,
   // projects,
@@ -9,13 +9,8 @@ import './experience.css';
 import SectionHeader from '../../components/SectionHeader';
 
 const ExperiencePage: React.FC = () => {
-  const [expandedWorkIndex, setExpandedWorkIndex] = useState<number | null>(null);
   // const [isPopupVisible, setIsPopupVisible] = useState(false);
   // const [popupContent, setPopupContent] = useState<ProjectItem | null>(null);
-
-  const toggleExpand = (index: number) => {
-    setExpandedWorkIndex(expandedWorkIndex === index ? null : index);
-  };
 
   // const openPopup = useCallback((content: ProjectItem) => {
   //   setPopupContent(content);
@@ -33,16 +28,6 @@ const ExperiencePage: React.FC = () => {
   //   }
   // };
 
-  const renderTechTags = (techString: string) => {
-    return (
-      <div className="tech-tags">
-        {techString.split(',').map((tag, idx) => (
-          <span key={idx} className="tech-tag">{tag.trim()}</span>
-        ))}
-      </div>
-    );
-  };
-
   return (
     <div className="experience-page">
       <section id="experience-section" className="experience-section">
@@ -50,46 +35,30 @@ const ExperiencePage: React.FC = () => {
         
         <div className="work-container">
           {workExperience.map((exp: ExperienceItem, index: number) => {
-            const isExpanded = expandedWorkIndex === index;
-            const detailsId = `work-details-${index}`;
-
             return (
-            <div
-              key={index}
-              role="button"
-              tabIndex={0}
-              className={`work-card ${isExpanded ? 'expanded' : ''}`}
-              onClick={() => toggleExpand(index)}
-              onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleExpand(index)}
-              aria-expanded={isExpanded}
-              aria-controls={detailsId}
-            >
-              <div className="work-header">
-                <div className="work-title">
-                  <h3>{exp.title}</h3>
-                  <h4>@ {exp.company}</h4>
+              <div key={index} className="work-item">
+                <div className="work-header">
+                  <div className="work-title">
+                    <h3>{exp.title}</h3>
+                    <h4>@ {exp.company}</h4>
+                  </div>
+                  <div className="work-meta">
+                    <span className="work-date">{exp.date}</span>
+                    <span className="work-location">{exp.location}</span>
+                  </div>
                 </div>
-                <div className="work-meta">
-                  <span className="work-date">{exp.date}</span>
-                  <span className="work-location">{exp.location}</span>
-                </div>
-              </div>
-              <div
-                id={detailsId}
-                className="work-details"
-                hidden={!isExpanded}
-              >
-                {exp.details.map((detail, detailIndex) => (
-                  <p key={detailIndex}>{detail}</p>
-                ))}
+                <ul className="work-details">
+                  {exp.details.map((detail, detailIndex) => (
+                    <li key={detailIndex}>{detail}</li>
+                  ))}
+                </ul>
                 {exp.tech && (
                   <div className="tech-stack">
-                    <strong>Tech Stack:</strong>
-                    {renderTechTags(exp.tech)}
+                    <span className="tech-label">Tech:</span>
+                    <span className="tech-list">{exp.tech}</span>
                   </div>
                 )}
               </div>
-            </div>
           )})}
         </div>
 

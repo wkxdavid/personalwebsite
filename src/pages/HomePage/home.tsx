@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './home.css';
-import { FaLinkedin, FaGithub, FaEnvelope, FaArrowDown } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 interface HomePageProps {
   scrollToSection: (ref: React.RefObject<HTMLElement | null>) => void;
@@ -29,14 +29,9 @@ const HomePage: React.FC<HomePageProps> = ({ scrollToSection, refs }) => {
         <div className='home-content'>
           <div className='greeting-text'>Hey there, I'm</div>
           
-          <h1 className='name-text'>
-            <span className='name-gradient'>David Pham</span>
-          </h1>
+          <h1 className='name-text'>David Pham</h1>
           
-          <div className='role-container'>
-            <span className='role-text'>Software Engineer</span>
-            <span className='role-cursor'>|</span>
-          </div>
+          <p className='role-text'>Software Engineer</p>
           
           {/* <p className='intro-text'>
             Recent graduate building full-stack solutions at HP Inc.
@@ -87,13 +82,6 @@ const HomePage: React.FC<HomePageProps> = ({ scrollToSection, refs }) => {
           </div>
         </div>
 
-        <button 
-          className='scroll-indicator'
-          onClick={() => handleScrollTo('aboutRef')}
-          aria-label='Scroll down'
-        >
-          <FaArrowDown />
-        </button>
       </div>
     </section>
   );

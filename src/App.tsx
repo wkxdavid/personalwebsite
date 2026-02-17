@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect, RefObject } from 'react';
 import './App.css';
 import Footer from './components/footer';
 import Navbar from './components/navbar';
-import ParticleBackground from './components/particleBackground';
 import AboutPage from './pages/AboutPage/about';
 import ExperiencePage from './pages/ExperiencePage/experience';
 import HomePage from './pages/HomePage/home';
@@ -14,8 +13,6 @@ function App() {
   const aboutRef = useRef<HTMLElement | null>(null);
   const experienceRef = useRef<HTMLElement | null>(null);
   const [visibleSection, setVisibleSection] = useState<SectionId>('home');
-  const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
@@ -51,58 +48,12 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    if (typeof window === 'undefined' || typeof window.matchMedia === 'undefined') {
-      return;
-    }
-
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const updatePreference = () => setPrefersReducedMotion(mediaQuery.matches);
-
-    updatePreference();
-    mediaQuery.addEventListener('change', updatePreference);
-
-    return () => mediaQuery.removeEventListener('change', updatePreference);
-  }, []);
-
-  useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
-
-    let lastTime = 0;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      const now = performance.now();
-      if (now - lastTime < 16) return; // ~60fps throttle
-      lastTime = now;
-
-      setMousePosition({
-        x: (e.clientX / window.innerWidth) * 100,
-        y: (e.clientY / window.innerHeight) * 100,
-      });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [prefersReducedMotion]);
-
   const scrollToSection = (ref: RefObject<HTMLElement | null>) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <div className="App">
-      <ParticleBackground />
-      {!prefersReducedMotion && (
-        <div
-          className="gradient-orb"
-          style={{
-            left: `${mousePosition.x}%`,
-            top: `${mousePosition.y}%`,
-          }}
-        />
-      )}
       <header className={`App-header ${visibleSection === 'home' ? 'hide' : 'show'}`}>
         <div className="navbar-container">
           <Navbar

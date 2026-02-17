@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import personalImage from '../../img/DavidPham.jpg';
 import './about.css';
 import { aboutContent } from '../../utils/static';
 import SectionHeader from '../../components/SectionHeader';
@@ -41,12 +40,6 @@ function AboutPage() {
                 </ul>
               </div>
             )}
-          </div>
-
-          <div className='about-image-wrapper'>
-            <div className='about-image'>
-              <img src={personalImage} alt='David Pham smiling in a suit' />
-            </div>
           </div>
         </div>
       </div>

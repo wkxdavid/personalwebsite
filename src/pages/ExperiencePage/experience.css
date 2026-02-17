@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-md);
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-2xl);
   font-family: var(--font-mono);
 }
 
@@ -111,6 +111,7 @@
 .work-details {
   margin: var(--space-md) 0 0 0;
   padding-left: var(--space-lg);
+  list-style: none;
   color: var(--text-secondary);
 }
 

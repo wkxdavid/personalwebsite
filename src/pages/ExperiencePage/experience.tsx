@@ -61,11 +61,6 @@ const ExperiencePage: React.FC = () => {
               </div>
           )})}
         </div>
-
-        <p className="experience-contact-note">
-          For more details about any of these roles or an resume, feel free to email me at{' '}
-          <a href="mailto:phamdavid722@gmail.com">phamdavid722@gmail.com</a>.
-        </p>
       </section>
 
       {/* Projects section commented out */}

@@ -59,7 +59,7 @@ export const workExperience = [
     date: 'May 2024 - August 2024',
     tech: 'React, TypeScript, Java, AWS, Selenium, Jest, Enzyme',
     details: [
-      'Developed React components for the HP Workforce Experience Platform and built a migration tool using Java to streamline enterprise workflows.',
+      'Developed React components for the HP Workforce Experience Platform and built a migration tool using Java to support enterprise customer onboarding.',
     ],
   },
   {

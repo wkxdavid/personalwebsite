@@ -119,3 +119,18 @@ a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+/* Dark Mode Styles */
+:root {
+  --primary-bg: #121212;
+  --secondary-bg: #1e1e1e;
+  --accent: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondary: #bbbbbb;
+  --border-color: #333333;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+}

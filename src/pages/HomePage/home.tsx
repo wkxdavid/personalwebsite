@@ -32,11 +32,6 @@ const HomePage: React.FC<HomePageProps> = ({ scrollToSection, refs }) => {
           <h1 className='name-text'>David Pham</h1>
           
           <p className='role-text'>Software Engineer</p>
-          
-          {/* <p className='intro-text'>
-            Recent graduate building full-stack solutions at HP Inc.
-            <span className='highlight'> </span> 
-          </p> */}
 
           <div className='home-actions'>
             <button

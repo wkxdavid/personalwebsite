@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import './home.css';
 import { FaLinkedin, FaGithub, FaEnvelope, FaArrowDown } from 'react-icons/fa';
-import VisitTracker from '../../components/VisitTracker';
 
 interface HomePageProps {
   scrollToSection: (ref: React.RefObject<HTMLElement | null>) => void;
@@ -96,7 +95,6 @@ const HomePage: React.FC<HomePageProps> = ({ scrollToSection, refs }) => {
           <FaArrowDown />
         </button>
       </div>
-      <VisitTracker />
     </section>
   );
 };

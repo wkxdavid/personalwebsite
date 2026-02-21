@@ -53,9 +53,9 @@ export const workExperience = [
     company: 'Human Centered Design and Engineering Department',
     location: 'Seattle, WA',
     date: 'September 2023 - December 2023',
-    tech: 'Python, Pandas, OpenAI GPT 4.0, Google Perspective',
+    tech: 'Python, Pandas, OpenAI GPT 3.5, Google Perspective',
     details: [
-      'Conducted research on improving content moderation through LLMs by analyzing toxicity in gaming chatrooms using OpenAI GPT-4 and Google Perspective API.',
+      'Conducted research on improving content moderation through LLMs by analyzing toxicity in gaming chatrooms using OpenAI API and Google Perspective API.',
     ],
   },
   {
@@ -76,8 +76,8 @@ export const aboutContent = {
         "I studied Informatics at the University of Washington primarily focusing on Software Engineering. Currently a full-stack SWE @ HP working on enterprise solutions.",
   activeSkills: [
     'Golang',
-    'Typescript',
     'React',
+    'TypeScript',
     'AWS',
     'MongoDB',
     'RabbitMQ',

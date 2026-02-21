@@ -29,12 +29,15 @@
 }
 
 /* Section styling */
-section {
+.main-content > section {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding-top: 72px;
   opacity: 1;
+}
+
+.main-content > section:not(#home) {
+  padding-top: 72px;
 }
 
 
@@ -99,7 +102,7 @@ section {
     padding: 0 var(--space-lg);
   }
   
-  section {
+  .main-content > section:not(#home) {
     padding-top: 64px;
   }
 }

@@ -67,6 +67,24 @@
   color: var(--accent);
   font-weight: 600;
   position: relative;
+  text-decoration: none;
+}
+
+.about-intro .highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+
+.about-intro .highlight:hover::after {
+  transform: scaleX(1);
 }
 
 .about-skills {

@@ -19,17 +19,13 @@ function AboutPage() {
         <div className='about-content'>
           <div className='about-text'>
             <p className='about-intro'>
-              I'm a software engineer passionate about building products that make a difference. 
-              Currently working at <span className='highlight'>HP Inc.</span> on enterprise solutions, 
-              where I get to solve complex problems and build scalable systems.
+              I'm a software engineer that enjoys buildinng cool things.
+              Currently working at <a href="https://www.hp.com/us-en/home.html" className='highlight'>HP Inc.</a> building features on the HP Workforce Experience Platform.
             </p>
 
             <p className='about-intro'>
-              I believe in writing clean, maintainable code and creating experiences that users actually 
-              enjoy. Whether it's full-stack development, data analysis, or mobile apps, I love the 
-              challenge of turning ideas into reality.
+              During college, I did leadship in organizations like <a href="https://swecc.org/" className='highlight'>SWECC</a> and <a href="https://www.valorantuw.com/" className='highlight'>VAL @ UW</a>, where I built community around technology and collaboration. But now outside of coding, I stay engaged through volunteer work, physical activity, and the occasional gaming session.
             </p>
-
             {aboutContent.activeSkills && aboutContent.activeSkills.length > 0 && (
               <div className='about-skills'>
                 <h3>Currently working with:</h3>
